@@ -21,6 +21,16 @@ module.exports = {
       "pink-dark": '#f47793',
       "skin": '#fdcd97',
       "white": '#ffe8ea',
+      "black": '#52091a',
+      "bg": '#fbe1e7'
+    },
+    screens: {
+      'xs': '475px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
     }
   },
   plugins: [],
