@@ -20,7 +20,7 @@ module.exports = {
       "pink-light": '#f9b1b7',
       "pink-dark": '#f47793',
       "skin": '#fdcd97',
-      "white": '#fffcf9',
+      "white": '#ffe8ea',
     }
   },
   plugins: [],
