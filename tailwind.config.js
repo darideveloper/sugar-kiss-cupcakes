@@ -14,6 +14,14 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    colors: {
+      "red-dark": '#87191a',
+      "red-light": '#b22724',
+      "pink-light": '#f9b1b7',
+      "pink-dark": '#f47793',
+      "skin": '#fdcd97',
+      "white": '#fffcf9',
+    }
   },
   plugins: [],
 };

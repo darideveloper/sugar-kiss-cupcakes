@@ -24,7 +24,11 @@ export default function RootLayout({ children }) {
       <div className="mx-auto">
         <header>
         </header>
-        <main className={fontRegular.className}>
+        <main 
+          className={`
+            ${fontRegular.className}
+          `}
+        >
           {children}
         </main>
         <footer>

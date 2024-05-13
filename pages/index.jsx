@@ -1,11 +1,10 @@
-import Image from "next/image"
 import Hero from "@/sections/hero"
 import RootLayout from "@/layouts/root-layout";
 
-export default function Home() {
+export default function Index({}) {
   return (
     <RootLayout>
-      main content
+      <Hero />
     </RootLayout>
   );
 }
