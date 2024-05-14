@@ -16,13 +16,14 @@ module.exports = {
     },
     colors: {
       "red-dark": '#87191a',
+      "red-dark-2": '#52091a',
       "red-light": '#b22724',
       "pink-light": '#f9b1b7',
       "pink-dark": '#f47793',
       "skin": '#fdcd97',
       "white": '#ffe8ea',
-      "black": '#52091a',
-      "bg": '#fbe1e7'
+      "bg": '#fbe1e7',
+      "black": '#26070e',
     },
     screens: {
       'xs': '475px',
