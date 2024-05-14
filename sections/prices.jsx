@@ -1,5 +1,6 @@
 import Title from '@/components/title'
 import PriceCard from '@/components/priceCard'
+import Image from 'next/image'
 
 export default function Hero({}) {
 
@@ -60,7 +61,41 @@ export default function Hero({}) {
         prices
         container
         mx-auto
+        relative
       `}>
+
+      <Image 
+        src="/images/decorator-2.webp"
+        alt="decoration image"
+        width={350}
+        height={30}
+        className={`
+          dectorator-top-right
+          absolute
+          top-0
+          left-0
+          opacity-0 lg:opacity-20
+          -z-10
+        `}
+      >  
+      </Image>
+
+      <Image 
+        src="/images/decorator-3.webp"
+        alt="decoration image"
+        width={350}
+        height={30}
+        className={`
+          dectorator-top-right
+          absolute
+          bottom-0
+          right-0
+          -z-10
+          opacity-0 lg:opacity-20
+          
+        `}
+      >  
+      </Image>
 
       <Title>Prices</Title>
 

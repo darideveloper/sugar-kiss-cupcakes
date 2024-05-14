@@ -21,6 +21,6 @@ export default function Title({children}) {
 }
 
 
-Title.PropTypes = {
+Title.propTypes = {
   children: PropTypes.node.isRequired,
 }
