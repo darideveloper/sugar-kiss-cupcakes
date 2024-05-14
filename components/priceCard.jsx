@@ -1,12 +1,13 @@
 import { fontAlternative } from '@/lib/fonts'
 import Image from 'next/image'
 import { useState } from 'react'
+import { whatsappLinkBase } from '@/lib/contact'
 
 export default function PriceCard ({title, price, details, image}) {
 
   const [isHovered, setIsHovered] = useState(false)
 
-  const whatsappLink = `https://api.whatsapp.com/send?phone=12019061316&text=Hi! I want a ${title}`
+  const whatsappLink = `${whatsappLinkBase} I am interested in ${title} cupcakes.`
 
   return (
     <article 
