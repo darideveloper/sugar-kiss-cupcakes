@@ -2,6 +2,7 @@ import { fontAlternative } from '@/lib/fonts'
 import Image from 'next/image'
 import { useState } from 'react'
 import { whatsappLinkBase } from '@/lib/contact'
+import PropTypes from 'prop-types'
 
 export default function PriceCard ({title, price, details, image}) {
 
@@ -186,4 +187,11 @@ export default function PriceCard ({title, price, details, image}) {
       </div>
     </article>
   )
+}
+
+PriceCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  details: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired
 }
