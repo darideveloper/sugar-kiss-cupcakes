@@ -61,13 +61,12 @@ export default function Hero({}) {
         />
         <p
           className={`
-            ${fontTitle.className}
             text-xl
             mt-4
             text-black
           `}
         >
-          Custom cupcakes made from scratch<br />using hight quality ingredients
+          Custom gourmet cupcakes, dessert cups & cakes <br />scratch made using high quality  all natural ingredients
         </p>
 
         <Cta
