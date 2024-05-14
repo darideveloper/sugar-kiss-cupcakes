@@ -40,8 +40,8 @@ export default function PriceCard ({title, price, details, image}) {
           width={500}
           height={500}
           className={`
-            rounded-full
             product-image
+            rounded-full
             w-11/12
             mx-auto
             opacity-80
@@ -55,11 +55,11 @@ export default function PriceCard ({title, price, details, image}) {
           className={`
             price-wrapper
             absolute
-            top-1/2
+            top-2/3
             left-1/2
             transform
             -translate-x-1/2
-            -translate-y-1/2
+            -translate-y-1/4
             flex
             items-center
             justify-center

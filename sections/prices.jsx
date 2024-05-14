@@ -9,49 +9,49 @@ export default function Hero({}) {
       "title": "Basic cupcakes",
       "price": "$2.25",
       "details": "Chocolate/vanilla only",
-      "image": "price-1.png"
+      "image": "cupcakes-stickers/1.png"
     },
     {
       "title": "Gourmet flavored cupcakes",
       "price": "$2.50",
       "details": "Flavor is baked into cupcake, but no filling inside",
-      "image": "price-1.png"
+      "image": "cupcakes-stickers/2.png"
     },
     {
       "title": "Gourmet flavored & filled cupcakes",
       "price": "$2.75",
       "details": "Filling inside cupcake with custard, jelly, cream or mousse",
-      "image": "price-1.png"
+      "image": "cupcakes-stickers/3.png"
     },
     {
       "title": "Design/Decoration cupcakes",
       "price": "$3.00",
       "details": "Sugar flowers, embellishments, characters",
-      "image": "price-1.png"
+      "image": "cupcakes-stickers/4.png"
     },
     {
       "title": "Boozy cupcakes",
       "price": "$3.00",
       "details": "Infused with any liquor or wine & can be filled",
-      "image": "price-1.png"
+      "image": "cupcakes-stickers/5.png"
     },
     {
       "title": "Mini Fruit Pies",
       "price": "$2.50",
       "details": "Any flavor",
-      "image": "price-1.png"
+      "image": "cupcakes-stickers/6.png"
     },
     {
       "title": "Mini tray cakes",
       "price": "$3.50",
       "details": "Any flavor, great for two people",
-      "image": "price-1.png"
+      "image": "cupcakes-stickers/7.png"
     },
     {
       "title": "Small Cakes",
       "price": "$30 - $65",
       "details": 'Any flavor, two layer with a filling in 6", 8", 10"',
-      "image": "price-1.png"
+      "image": "cupcakes-stickers/8.png"
     },
   ]
 
