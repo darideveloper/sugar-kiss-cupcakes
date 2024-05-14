@@ -12,6 +12,7 @@ export default function AnyCupcake() {
         flex
         items-center
         justify-center
+        flex-col md:flex-row
       `}
     >
 
@@ -25,6 +26,7 @@ export default function AnyCupcake() {
           w-36
           opacity-50
           rotate-90
+          hidden md:block
         `}
       />
       <p
@@ -32,7 +34,8 @@ export default function AnyCupcake() {
           ${fontAlternative.className}
           text-4xl
           text-center
-          w-1/2
+          w-full md:w-1/2
+          px-2
         `}
       >
         Any cupcake can be turned into a dessert cup
@@ -48,6 +51,21 @@ export default function AnyCupcake() {
           w-36
           opacity-50
           -rotate-90
+          hidden md:block
+        `}
+      />
+
+      <Image
+        src="/images/decorator-4.webp"
+        alt="Decorative image"
+        width={200}
+        height={200}
+        className={`
+          decorator-bottom
+          w-48
+          opacity-50
+          block md:hidden
+          mt-4
         `}
       />
     </div>
