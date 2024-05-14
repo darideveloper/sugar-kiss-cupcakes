@@ -2,6 +2,16 @@
 @tailwind components
 @tailwind utilities
 
+$color-red-dark: #87191a
+$color-red-dark-2: #52091a
+$color-red-light: #b22724
+$color-pink-light: #f9b1b7
+$color-pink-dark: #f47793
+$color-skin: #fdcd97
+$color-white: #ffe8ea
+$color-bg: #fbe1e7
+$color-black: #26070e
+
 body
     color: #52091a
     background: rgb(171,73,114)
@@ -14,12 +24,20 @@ body
 .debug
     border: 1px solid red !important
 
-@keyframes blink
-    0%
-        transform: scale(1)
+    /* width */
+::-webkit-scrollbar
+    width: 10px
 
-    50%
-        transform: scale(1.2)
+/* Track */
+::-webkit-scrollbar-track
+    background: $color-bg
 
-    100%
-        transform: scale(1)
+/* Handle */
+::-webkit-scrollbar-thumb
+    background: $color-pink-dark
+    border-radius: 50px
+    transition-duration: 0.5s
+
+    /* Handle on hover */
+    &:hover
+        background: $color-red-light
