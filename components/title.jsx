@@ -8,7 +8,7 @@ export default function Title({children}) {
         text-4xl
         text-pink-dark
         ${fontTitle.className}
-        mt-16
+        mt-28
         mb-10
         block
         font-bold

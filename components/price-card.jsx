@@ -38,7 +38,7 @@ export default function PriceCard ({title, price, details, image}) {
       >
         <Image 
           src={`/images/${image}`}
-          alt={title}
+          alt={`${title} cupcake`}
           width={500}
           height={500}
           className={`
