@@ -1,5 +1,5 @@
 import Title from '@/components/title'
-import PriceCard from '@/components/priceCard'
+import PriceCard from '@/components/price-card'
 import Image from 'next/image'
 
 export default function Hero({}) {
