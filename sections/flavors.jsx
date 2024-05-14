@@ -125,6 +125,18 @@ export default function Flavors() {
     >
 
       <Title>Flavors</Title>
+      
+      <p
+        className={`
+          text-center
+          max-w-lg
+          mx-auto
+          mb-8
+          px-4
+        `}
+      >
+        Any flavor, color or theme can be made with buttercream, whipped cream or cream cheese frosting
+      </p>
 
       <div 
         className={`
@@ -186,6 +198,18 @@ export default function Flavors() {
           ))
         }
       </div>
+
+      <p
+        className={`
+          text-center
+          max-w-lg
+          mx-auto
+          text-sm
+          px-4
+        `}
+      >
+        Fruity pebbles, Fruit Loops or Cocoa Crisp cereal (made with CascadIan organic cereal)
+      </p>
     </section>
 
   )
