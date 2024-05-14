@@ -43,7 +43,6 @@ export default function PriceCard ({title, price, details, image}) {
           height={500}
           className={`
             product-image
-            rounded-full
             w-11/12
             mx-auto
             opacity-80
