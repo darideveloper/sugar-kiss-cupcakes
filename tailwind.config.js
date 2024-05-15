@@ -24,6 +24,7 @@ module.exports = {
       "white": '#ffe8ea',
       "bg": '#fbe1e7',
       "black": '#26070e',
+      "golden": '#a98c54'
     },
     screens: {
       'xs': '475px',

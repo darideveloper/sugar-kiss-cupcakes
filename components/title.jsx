@@ -6,7 +6,7 @@ export default function Title({children}) {
     <h2
       className={`
         text-4xl
-        text-pink-dark
+        text-golden
         ${fontTitle.className}
         mt-28
         mb-10
