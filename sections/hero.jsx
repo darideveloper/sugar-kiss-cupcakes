@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { fontAlternative, fontTitle } from '@/lib/fonts'
+import { fontTitle } from '@/lib/fonts'
 import Cta from '@/components/cta'
 
 export default function Hero({}) {
@@ -40,7 +40,7 @@ export default function Hero({}) {
 
         <h1
           className={`
-            ${fontAlternative.className}
+            ${fontTitle.className}
             text-6xl
             text-pink-dark
             mt-14

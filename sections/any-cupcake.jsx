@@ -1,5 +1,5 @@
 import Image from "next/image" 
-import { fontAlternative } from "@/lib/fonts"
+import { fontTitle } from "@/lib/fonts"
 
 export default function AnyCupcake() {
   return (
@@ -31,7 +31,7 @@ export default function AnyCupcake() {
       />
       <p
         className={`
-          ${fontAlternative.className}
+          ${fontTitle.className}
           text-4xl
           text-center
           w-full md:w-1/2

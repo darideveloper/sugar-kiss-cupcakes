@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { fontAlternative } from '@/lib/fonts'
+import { fontTitle } from '@/lib/fonts'
 import { useState } from 'react'
 
 export default function GallerySlide ({imagePath, text = "", link="#"}) {
@@ -62,7 +62,7 @@ export default function GallerySlide ({imagePath, text = "", link="#"}) {
       >
         <p
           className={`
-            ${fontAlternative.className}
+            ${fontTitle.className}
             text-center
             text-3xl
             z-10

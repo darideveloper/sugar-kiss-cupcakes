@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import { fontAlternative } from '@/lib/fonts'
+import { fontTitle } from '@/lib/fonts'
 import { whatsappLinkBase } from '@/lib/contact'
 
 export default function PriceCard ({title, price, details, image}) {
@@ -73,7 +73,7 @@ export default function PriceCard ({title, price, details, image}) {
         <h3
           className={`
             title
-            ${fontAlternative.className}
+            ${fontTitle.className}
             text-3xl
             text-pink-dark
             text-center
