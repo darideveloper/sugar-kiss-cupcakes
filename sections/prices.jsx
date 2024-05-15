@@ -9,43 +9,36 @@ export default function Prices({}) {
       "title": "Basic gourmet flavor",
       "price": "$2.50",
       "details": "Chocolate/vanilla only",
-      "image": "prices/1.jpeg"
     },
     {
       "title": "Filled gourmet flavor",
       "price": "$2.75",
       "details": "Filling inside cupcake with custard, jelly, cream or mousse",
-      "image": "prices/2.jpeg"
     },
     {
       "title": "Decorated gourmet flavor",
       "price": "$3.00",
       "details": "Sugar flowers, embellishments, characters",
-      "image": "prices/3.jpeg"
     },
     {
       "title": "Boozy cupcakes",
       "price": "$3.00",
       "details": "Infused with any liquor or wine & can be filled",
-      "image": "prices/4.jpeg"
     },
     {
       "title": "Dessert parfait cups",
       "price": "$3- $3.50",
       "details": "Any flavor",
-      "image": "prices/5.jpeg"
     },
     {
       "title": "Mini tray cakes",
       "price": "$3.50",
       "details": "Any flavor, great for two people",
-      "image": "prices/6.jpeg"
     },
     {
       "title": "Small Cakes",
       "price": "$30 - $65",
       "details": 'Any flavor, two layer with a filling in 6", 8", 10"',
-      "image": "prices/7.jpeg"
     },
   ]
 
@@ -71,8 +64,7 @@ export default function Prices({}) {
           opacity-0 lg:opacity-10
           -z-10
         `}
-      >  
-      </Image>
+      />  
 
       <Image 
         src="/images/decorator-3.webp"
@@ -87,8 +79,7 @@ export default function Prices({}) {
           -z-10
           opacity-0 lg:opacity-10
         `}
-      >  
-      </Image>
+      />  
 
       <Title>Prices</Title>
 
@@ -108,7 +99,7 @@ export default function Prices({}) {
               title={priceData.title}
               price={priceData.price}
               details={priceData.details}
-              image={priceData.image}
+              image={`/images/prices/${priceData.title} cupcake.jpeg`}
               key={priceData.title}
             />
           ))
