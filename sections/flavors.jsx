@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Title from '@/components/title'
 import { whatsappLinkBase } from '@/lib/contact'
 
@@ -6,112 +7,150 @@ export default function Flavors() {
   const flavorsData = [
     {
       "icon": "🍓",
-      "text": "Strawberry Shortcake"
+      "text": "Strawberry Shortcake",
+      "type_icon": "text",
     },
     {
       "icon": "🫐",
-      "text": "Fresh Berry Vanilla"
+      "text": "Fresh Berry Vanilla",
+      "type_icon": "text",
     },
     {
       "icon": "🍌",
-      "text": "Banana Cream Pie"
+      "text": "Banana Cream Pie",
+      "type_icon": "text",
     },
     {
       "icon": "🍓",
-      "text": "Strawberry Banana"
+      "text": "Strawberry Banana",
+      "type_icon": "text",
     },
     {
       "icon": "🍪",
-      "text": "Cookies & Cream"
+      "text": "Cookies & Cream",
+      "type_icon": "text",
     },
     {
       "icon": "🌈",
-      "text": "Confetti Surprise"
+      "text": "Confetti Surprise",
+      "type_icon": "text",
     },
     {
       "icon": "🤍",
-      "text": "White Chocolate"
+      "text": "White Chocolate",
+      "type_icon": "text",
     },
     {
       "icon": "🌿",
-      "text": "Mint chocolate"
+      "text": "Mint chocolate",
+      "type_icon": "text",
     },
     {
       "icon": "🍋",
-      "text": "Lemon Meringue"
+      "text": "Lemon Meringue",
+      "type_icon": "text",
     },
     {
       "icon": "🎃",
-      "text": "Pumpkin Spice"
+      "text": "Pumpkin Spice",
+      "type_icon": "text",
     },
     {
       "icon": "🍫",
-      "text": "Milk Chocolate"
+      "text": "Milk Chocolate",
+      "type_icon": "text",
     },
     {
       "icon": "🍊",
-      "text": "Orange Cream"
+      "text": "Orange Cream",
+      "type_icon": "text",
     },
     {
       "icon": "🥑",
-      "text": "Avocado Spice"
+      "text": "Avocado Spice",
+      "type_icon": "text",
     },
     {
       "icon": "🍂",
-      "text": "French Vanilla"
+      "text": "French Vanilla",
+      "type_icon": "text",
     },
     {
       "icon": "🥕",
-      "text": "Carrot Spice"
+      "text": "Carrot Spice",
+      "type_icon": "text",
     },
     {
       "icon": "🧈",
-      "text": "Butter Pecan"
+      "text": "Butter Pecan",
+      "type_icon": "text",
     },
     {
       "icon": "🍒",
-      "text": "Cherry Pie"
+      "text": "Cherry Pie",
+      "type_icon": "text",
     },
     {
       "icon": "🥭",
-      "text": "Mango Kiwi"
+      "text": "Mango Kiwi",
+      "type_icon": "text",
     },
     {
       "icon": "🍑",
-      "text": "Peach Cobbler"
+      "text": "Peach Cobbler",
+      "type_icon": "text",
+      "type_icon": "text",
     },
     {
       "icon": "🍍",
-      "text": "Pina Colada"
+      "text": "Pina Colada",
+      "type_icon": "text",
     },
     {
       "icon": "🍎",
-      "text": "Apple Honey"
+      "text": "Apple Honey",
+      "type_icon": "text",
     },
     {
       "icon": "🍈",
-      "text": "Key Lime Pie"
+      "text": "Key Lime Pie",
+      "type_icon": "text",
     },
     {
       "icon": "☕",
-      "text": "Espresso"
+      "text": "Espresso",
+      "type_icon": "text",
     },
     {
       "icon": "🥨",
-      "text": "Pretzel Carmel"
+      "text": "Pretzel Carmel",
+      "type_icon": "text",
     },
     {
       "icon": "🍫",
-      "text": "Nutella"
+      "text": "Nutella",
+      "type_icon": "text",
     },
     {
       "icon": "🌰",
-      "text": "Pistachio"
+      "text": "Pistachio",
+      "type_icon": "text",
     },
     {
       "icon": "🇮🇹",
-      "text": "Tiramisu"
-    }
+      "text": "Tiramisu",
+      "type_icon": "text",
+    },
+    {
+      "icon": "",
+      "text": "Fruity pebbles",
+      "type_icon": "image",
+    },
+    {
+      "icon": "",
+      "text": "Cocoa Crisp",
+      "type_icon": "image",
+    },
   ]
 
   return (
@@ -164,9 +203,9 @@ export default function Flavors() {
               href={`${whatsappLinkBase} I am interested in ${flavorData.text} cupcakes.`}
               target="_blank"
             >
-              <p
+              <div 
                 className={`
-                  text-6xl
+                  icon
                   opacity-50
                   duration-500
                   group-hover:-translate-y-2
@@ -174,8 +213,29 @@ export default function Flavors() {
                   group-hover:opacity-70
                 `}
               >
-                {flavorData.icon}
-              </p>
+                {
+                  flavorData.type_icon == "text"
+                  ?
+                  <p
+                    className={`
+                      text-6xl
+                    `}
+                  >
+                    {flavorData.icon}
+                  </p>
+                  :
+                  <Image 
+                    src={`/images/flavors/${flavorData.text} flavor.jpeg`}
+                    width={60}
+                    height={60}
+                    alt={`${flavorData.text} flavor`}
+                    className={`
+
+                    `}
+                  />
+                }
+              </div>
+
               <p
                 className={`
                   w-full
@@ -208,7 +268,7 @@ export default function Flavors() {
           px-4
         `}
       >
-        Fruity pebbles, Fruit Loops or Cocoa Crisp cereal (made with CascadIan organic cereal)
+        Fruity pebbles, Fruit Loops and Cocoa Crisp cereal are made with CascadIan organic cereal
       </p>
     </section>
 

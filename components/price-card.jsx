@@ -1,8 +1,7 @@
-import { fontAlternative } from '@/lib/fonts'
 import Image from 'next/image'
-import { useState } from 'react'
-import { whatsappLinkBase } from '@/lib/contact'
 import PropTypes from 'prop-types'
+import { fontAlternative } from '@/lib/fonts'
+import { whatsappLinkBase } from '@/lib/contact'
 
 export default function PriceCard ({title, price, details, image}) {
  
