@@ -35,12 +35,11 @@ export default function GallerySlide ({imagePath, text = "", link="#"}) {
           h-full
           w-full
           duration-300
-          opacity-80
-          hover:opacity-100
           hover:scale-110
           select-none
           ${text && 'cursor-pointer'}
-          ${text ? 'hover:opacity-10' : 'hover:'}
+          ${text ? 'opacity-100' : 'opacity-80'}
+          ${text ? 'hover:opacity-10' : 'hover:opacity-100'}
         `}
       />
 
