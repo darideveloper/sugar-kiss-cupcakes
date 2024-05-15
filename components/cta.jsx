@@ -28,8 +28,10 @@ export default function Cta({ content, href, type, iconPath, className = "", sma
           ${textSize} font-bold uppercase
           w-full ${paddingY}
           rounded-2xl shadow-lg ${textColor} ${bgColor}
-          hover:shadow-xl hover:bg-opacity-90 duration-200
+          hover:shadow-xl hover:bg-opacity-90
+          duration-300
           md:rounded-3xl
+          hover:scale-110
           ${className}          
         `}>
         <div className={`
@@ -54,8 +56,7 @@ export default function Cta({ content, href, type, iconPath, className = "", sma
               className={`
               w-12 px-2 
               ${fillColor}
-              group-hover:-translate-x-3
-              duration-200
+              duration-300
             `}>
               {iconPath}
             </svg>
