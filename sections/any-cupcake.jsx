@@ -38,7 +38,7 @@ export default function AnyCupcake() {
           px-2
         `}
       >
-        Any cupcake can be turned into a dessert cup
+        Any cupcake flavor can also be made also into a dessert parfait cup
       </p>
 
       <Image
