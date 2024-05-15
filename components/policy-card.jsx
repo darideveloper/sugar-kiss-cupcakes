@@ -38,7 +38,6 @@ export default function PolicyCard({title, texts}) {
                 key={text}
                 className={`
                   text
-                  text-sm
                   text-center md:text-right
                   my-2
                 `}

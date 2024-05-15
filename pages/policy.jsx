@@ -1,5 +1,6 @@
 import RootLayout from "@/layouts/root-layout"
 import PolicyCard from "@/components/policy-card"
+import MainText from '@/components/main-text'
 
 export default function Index({}) {
   
@@ -28,6 +29,10 @@ export default function Index({}) {
   
   return (
     <RootLayout>
+      <MainText>
+        Sugar Kisses Policies
+      </MainText>
+
       {
         policies.map((policy, index) => {
           return (

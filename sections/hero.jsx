@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import { fontTitle } from '@/lib/fonts'
 import Cta from '@/components/cta'
+import MainText from '@/components/main-text';
 
 export default function Hero({}) {
   
@@ -44,16 +44,10 @@ export default function Hero({}) {
           `}
         >
 
-          <h1
-            className={`
-              ${fontTitle.className}
-              text-6xl
-              text-golden
-              mt-14
-            `}
-          >
+          <MainText>
             Sugar Kiss your day!
-          </h1>
+          </MainText>
+
           <Image 
             src="/images/decorator-1.webp"
             alt="Decorative image"
