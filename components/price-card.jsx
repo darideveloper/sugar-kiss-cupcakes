@@ -5,35 +5,31 @@ import { whatsappLinkBase } from '@/lib/contact'
 import PropTypes from 'prop-types'
 
 export default function PriceCard ({title, price, details, image}) {
-
-  const [isHovered, setIsHovered] = useState(false)
-
+ 
   const whatsappLink = `${whatsappLinkBase} I am interested in ${title} cupcakes.`
 
   return (
     <article 
       className={`
         price-card
-        mb-14
+        mb-20
         px-8
-        relative
         group
-        overflow-hidden
+        flex
+        flex-col sm:flex-row
+        items-center
+        justify-center
       `}
       key={title}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       <div
         className={`
           images-wrapper
-          w-64
+          w-11/12 sm:w-1/2
           mx-auto
           relative
           transition
           duration-500
-          group-hover:-translate-x-3/4
-          overflow-hidden
         `}
       >
         <Image 
@@ -48,89 +44,30 @@ export default function PriceCard ({title, price, details, image}) {
             opacity-80
             transition
             duration-500
-            group-hover:opacity-40
+            rounded-2xl
           `}
         />
-
-        <div 
-          className={`
-            price-wrapper
-            absolute
-            top-2/3
-            left-1/2
-            transform
-            -translate-x-1/2
-            -translate-y-1/4
-            flex
-            items-center
-            justify-center
-            w-full
-            bg-white
-            py-2
-            rounded-xl
-            shadow-lg
-            transition
-            duration-500
-            group-hover:opacity-0
-          `}>
-
-          <p
-            className={`
-              price
-              font-bold
-              ${fontAlternative.className}
-              text-pink-dark
-              font-bold
-              text-3xl
-            `}>
-            {price}
-
-          </p>
-
-          <svg 
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            className={`
-            fill-pink-dark
-              w-6
-              h-6
-              ml-4
-              animate-pulse
-            `}
-          > 
-            <path d="M4.021 10.688c1.208.172 2.51 1.312 2.979 1.781v-10.514c0-1.08.92-1.955 2-1.955s2 .875 2 1.955v6.058c0 .784.814.885.919.103.216-1.604 2.519-1.817 2.693.399.043.546.726.655.866.027.326-1.444 2.501-1.458 2.758.758.066.579.796.696.848.034.051-.67.281-.934.607-.934 1.098 0 2.309 2.019 2.309 4.41 0 4.295-3 4.306-3 11.19h-10c-.332-3.942-3.462-7.431-6.271-10.241-.488-.488-.729-1.052-.729-1.564 0-.93.759-1.688 2.021-1.507z"/>
-          </svg>
-
-        </div>
-
 
       </div>
 
       <div
         className={`
           texts
-          absolute
-          top-0
-          right-0
-          w-7/12
-          h-full
+          mt-6
+          w-11/12 sm:w-1/2
+          mx-auto
           flex
           flex-col
           justify-center
           items-center
           transition
           duration-500
-          opacity-0 group-hover:opacity-100
+          opacity-100
           cursor-pointer
-          mr-4
         `}
         onClick={() => {
           // Open whatsapp in a new tab
-          if (isHovered) {
-            window.open(whatsappLink, '_blank')
-          }
+          window.open(whatsappLink, '_blank')
         }}
         >
 
