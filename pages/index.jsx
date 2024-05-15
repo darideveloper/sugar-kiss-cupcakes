@@ -5,6 +5,7 @@ import AnyCupcake from "@/sections/any-cupcake"
 import Flavors from "@/sections/flavors"
 import About from "@/sections/about"
 import Pickup from "@/sections/pickup"
+import Gallery from "@/sections/gallery"
 
 export default function Index({}) {
   return (
@@ -15,6 +16,7 @@ export default function Index({}) {
       <Flavors />
       <About />
       <Pickup />
+      <Gallery />
     </RootLayout>
   )
 }

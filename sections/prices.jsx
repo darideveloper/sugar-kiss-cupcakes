@@ -74,7 +74,7 @@ export default function Prices({}) {
           absolute
           top-0
           left-0
-          opacity-0 lg:opacity-20
+          opacity-0 lg:opacity-10
           -z-10
         `}
       >  
@@ -91,8 +91,7 @@ export default function Prices({}) {
           bottom-0
           right-0
           -z-10
-          opacity-0 lg:opacity-20
-          
+          opacity-0 lg:opacity-10
         `}
       >  
       </Image>
