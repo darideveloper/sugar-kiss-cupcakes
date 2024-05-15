@@ -258,18 +258,6 @@ export default function Flavors() {
           ))
         }
       </div>
-
-      <p
-        className={`
-          text-center
-          max-w-lg
-          mx-auto
-          text-sm
-          px-4
-        `}
-      >
-        Fruity pebbles, Fruit Loops and Cocoa Crisp cereal are made with CascadIan organic cereal
-      </p>
     </section>
 
   )
