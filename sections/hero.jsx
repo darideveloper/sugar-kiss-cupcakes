@@ -10,77 +10,98 @@ export default function Hero({}) {
     <section 
       className={`
         hero
-        w-full
-        flex
-        items-center
-        justify-evenly
         container
         mx-auto
-        flex-col md:flex-row
         px-4
       `}>
 
-      <Image 
-        src="/images/hero.webp"
-        alt="Nadine in cartoon version"
-        width={500}
-        height={500}
-        className={`
-          w-10/12 md:w-1/3 lg:auto
-          -mr-10 md:mr-0
-        `}
-      />
-
       <div 
         className={`
-          text
-          text-center
+          content
+          flex
+          items-center
+          justify-evenly
+          w-full
+          flex-col md:flex-row
         `}
       >
 
-        <h1
-          className={`
-            ${fontTitle.className}
-            text-6xl
-            text-pink-dark
-            mt-14
-          `}
-        >
-          Sugar Kiss your day!
-        </h1>
         <Image 
-          src="/images/decorator-1.webp"
-          alt="Decorative image"
-          width={200}
-          height={200}
+          src="/images/hero.webp"
+          alt="Nadine in cartoon version"
+          width={500}
+          height={500}
           className={`
-              mx-auto
-              w-60
-              opacity-50
+            w-10/12 md:w-1/3 lg:auto
+            -mr-10 md:mr-0
           `}
         />
-        <p
+
+        <div 
           className={`
-            text-xl
-            mt-4
-            text-black
+            text
+            text-center
           `}
         >
-          Custom gourmet cupcakes, dessert cups & cakes <br />scratch made using high quality  all natural ingredients
-        </p>
 
-        <Cta
-          content="Order now"
-          href="/order"
-          iconPath={arrowPath}
-          type='primary'
-          small={true}
-          className={`
-            mt-8
-          `}
-        />
+          <h1
+            className={`
+              ${fontTitle.className}
+              text-6xl
+              text-golden
+              mt-14
+            `}
+          >
+            Sugar Kiss your day!
+          </h1>
+          <Image 
+            src="/images/decorator-1.webp"
+            alt="Decorative image"
+            width={200}
+            height={200}
+            className={`
+                mx-auto
+                w-60
+                opacity-50
+            `}
+          />
+          <p
+            className={`
+              text-xl
+              mt-4
+              text-black
+            `}
+          >
+            Custom gourmet cupcakes, dessert cups & cakes <br />scratch made using high quality  all natural ingredients
+          </p>
 
+          <Cta
+            content="Order now"
+            href="/order"
+            iconPath={arrowPath}
+            type='primary'
+            small={true}
+            className={`
+              mt-8
+            `}
+          />
+
+        </div>
       </div>
+
+      <Image 
+        src="/images/logo.webp"
+        width={500}
+        height={500}
+        alt="Sugar Kiss Cupcakes logo"
+        className={`
+          mx-auto
+          my-20
+          w-full
+          max-w-lg
+        `}
+      />
+
     </section>
   );
 }
