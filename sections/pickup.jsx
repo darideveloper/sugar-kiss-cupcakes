@@ -3,7 +3,7 @@ import Title from '@/components/title'
 
 export default function Pickup ({}) {
 
-  const mapsLink = "https://www.google.com/maps/place/Ridgefield,+Nueva+Jersey,+EE.+UU./@40.8299552,-74.053333,13z/data=!3m1!4b1!4m6!3m5!1s0x89c2f79a5675ca7b:0xf6d61c869c6d3b4f!8m2!3d40.8342669!4d-74.0087505!16zL20vMHhreTg?entry=ttu&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+  const mapsLink = "https://www.google.com/maps/embed/v1/place?q=https://www.google.com/maps/place/681+Elite+Ct,+Ridgefield,+NJ+07657,+EE.+UU./@40.8265033,-74.0033488,17z/data=!3m1!4b1!4m6!3m5!1s0x89c2f7bcd763bd39:0x1cc78f816f130c93!8m2!3d40.8265033!4d-74.0033488!16s%2Fg%2F11c4vvfs70?entry=ttu&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
 
   return (
 
@@ -36,6 +36,8 @@ export default function Pickup ({}) {
           `}
         >
           Pickup is in Ridgefield, NJ or we deliver locally
+          <br />
+          Delivery in Bergen county for $10
         </p>
 
         <iframe 
