@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Image from 'next/image'
 import { fontTitle } from '@/lib/fonts'
 import { useState } from 'react'
@@ -73,4 +74,10 @@ export default function GallerySlide ({imagePath, text = "", link="#"}) {
       </div>
     </div>
   )
+}
+
+GallerySlide.propTypes = {
+  imagePath: PropTypes.string.isRequired,
+  text: PropTypes.string,
+  link: PropTypes.string
 }
