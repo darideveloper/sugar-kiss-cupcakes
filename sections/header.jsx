@@ -2,10 +2,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { fontTitle } from '@/lib/fonts'
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
+
 
 export default function Header ({}) {
 
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathName = usePathname()
+  console.log(pathName)
   
   const links = [
     {
@@ -82,6 +86,8 @@ export default function Header ({}) {
                     px-8
                     duration-300
                     hover:text-golden
+                    ${pathName == link.link && 'opacity-50'}
+                    ${pathName == link.link && 'pointer-events-none'}
                   `}
                 >
                   {link.text}
