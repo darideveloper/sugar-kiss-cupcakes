@@ -1,6 +1,8 @@
+import PropTypes from 'prop-types'
 import AOS from 'aos'
 import Head from 'next/head'
 import Header from '@/sections/header'
+import Footer from '@/sections/footer'
 
 import 'aos/dist/aos.css'
 
@@ -39,9 +41,14 @@ export default function RootLayout({ children, pageTitle }) {
         >
           {children}
         </main>
-        <footer>
-        </footer> 
+        <Footer />
       </div>
     </>
   )
+}
+
+
+RootLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+  pageTitle: PropTypes.string
 }
