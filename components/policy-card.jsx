@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types'
 import Title from '@/components/title'
 import Image from 'next/image'
-import PropTypes from 'prop-types'
 
 export default function PolicyCard({title, texts}) {
   return (

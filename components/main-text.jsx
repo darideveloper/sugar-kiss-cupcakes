@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { fontTitle } from '@/lib/fonts'
 
 export default function MainText ({children}) {
@@ -14,4 +15,8 @@ export default function MainText ({children}) {
       {children}
     </h1>
   )
+}
+
+MainText.propTypes = {
+  children: PropTypes.node.isRequired,
 }

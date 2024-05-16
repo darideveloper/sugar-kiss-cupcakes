@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import PropTypes from 'prop-types'
+import Image from 'next/image'
 import { fontTitle } from '@/lib/fonts'
 import { whatsappLinkBase } from '@/lib/contact'
 
