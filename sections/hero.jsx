@@ -13,7 +13,9 @@ export default function Hero({}) {
         container
         mx-auto
         px-4
-      `}>
+      `}
+      id="hero"
+    >
 
       <div 
         className={`
@@ -45,7 +47,7 @@ export default function Hero({}) {
         >
 
           <MainText>
-            Sugar Kiss your day!
+            Welcome to Sugar Kiss Cupcakes 
           </MainText>
 
           <Image 

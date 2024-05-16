@@ -12,6 +12,7 @@ export default function About() {
         container
         mx-auto
       `}
+      id="about"
     >
 
       <Title>About Us</Title>

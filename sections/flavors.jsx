@@ -161,6 +161,7 @@ export default function Flavors() {
         container
         mx-auto
       `}
+      id="flavors"
     >
 
       <Title>Flavors</Title>

@@ -1,6 +1,9 @@
 import AOS from 'aos'
 import Head from 'next/head'
+import Header from '@/sections/header'
+
 import 'aos/dist/aos.css'
+
 import { fontRegular } from '@/lib/fonts'
 import { metaData } from '@/lib/meta'
 import { useEffect } from 'react'
@@ -22,8 +25,7 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content={metaData.keywords} />      
       </Head>
       <div className="mx-auto">
-        <header>
-        </header>
+        <Header />
         <main 
           className={`
             ${fontRegular.className}

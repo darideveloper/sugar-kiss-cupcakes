@@ -44,6 +44,7 @@ export default function Gallery({}) {
         mx-auto
         relative
       `}
+      id="gallery"
     >
       <Title>Gallery</Title>
 

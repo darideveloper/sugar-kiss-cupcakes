@@ -14,6 +14,7 @@ export default function AnyCupcake() {
         justify-center
         flex-col md:flex-row
       `}
+      id="any-cupcake"
     >
 
       <Image

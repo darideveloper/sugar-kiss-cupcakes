@@ -49,7 +49,9 @@ export default function Prices({}) {
         container
         mx-auto
         relative
-      `}>
+      `}
+      id="prices"
+    >
 
       <Image 
         src="/images/decorator-2.webp"

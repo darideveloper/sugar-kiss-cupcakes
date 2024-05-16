@@ -13,7 +13,9 @@ export default function Pickup ({}) {
         mx-auto
         relative
         mb-56 xs:mb-0
-      `}>
+      `}
+      id="pickup"
+    >
       <Title>Pickup</Title>
 
       <div 
