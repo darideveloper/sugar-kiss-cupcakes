@@ -164,7 +164,7 @@ export default function Flavors() {
       id="flavors"
     >
 
-      <Title>Flavors</Title>
+      <Title>Cupcake Flavors</Title>
       
       <p
         className={`
