@@ -4,7 +4,7 @@ import MainText from '@/components/main-text'
 export default function Index({}) {
   
   return (
-    <RootLayout>
+    <RootLayout pageTitle="Order Now">
       <MainText>
         Order now your delicious cupcakes!
       </MainText>

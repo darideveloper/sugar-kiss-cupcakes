@@ -28,7 +28,7 @@ export default function Index({}) {
   ]
   
   return (
-    <RootLayout>
+    <RootLayout pageTitle="Policy">
       <MainText>
         Sugar Kisses Policies
       </MainText>

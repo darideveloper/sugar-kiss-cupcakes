@@ -9,7 +9,7 @@ import { metaData } from '@/lib/meta'
 import { useEffect } from 'react'
 
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, pageTitle }) {
   
   // Load AOS
   useEffect(() => {
@@ -19,7 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <>
       <Head>
-        <title>{metaData.title}</title>
+        {
+          pageTitle
+          ?
+          <title>{pageTitle} | {metaData.title}</title>
+          :
+          <title>{metaData.title}</title>
+        }
         <meta name="description" content={metaData.description} />
         <meta name="author" content={metaData.author} />
         <meta name="keywords" content={metaData.keywords} />      
