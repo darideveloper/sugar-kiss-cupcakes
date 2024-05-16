@@ -3,7 +3,7 @@ import { fontTitle } from "@/lib/fonts"
 
 export default function AnyCupcake() {
   return (
-    <div 
+    <section 
       className={`
         any-cupcake
         container
@@ -69,6 +69,6 @@ export default function AnyCupcake() {
           mt-4
         `}
       />
-    </div>
+    </section>
   )
 }
