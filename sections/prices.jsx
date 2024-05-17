@@ -107,22 +107,6 @@ export default function Prices({}) {
           ))
         }
       </div>
-
-      <p
-        className={`
-          warnning
-          container
-          mx-auto
-          text-center
-        `}>
-        Minimum order for cupcakes & mini pies are 4 per flavor
-        <br />
-        Discounts offered for large orders over 24 cupcakes
-        <br />
-        All orders could be made with whipped cream,
-      </p>
-
-
     </section>
   );
 }
