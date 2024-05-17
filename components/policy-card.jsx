@@ -16,11 +16,7 @@ export default function PolicyCard({title, texts}) {
       <div 
         className={`
           content
-          flex
-          flex-col md:flex-row-reverse
-          items-center
-          justify-center
-          max-w-4xl
+          max-w-2xl
           mx-auto
           px-4
         `}
@@ -38,7 +34,7 @@ export default function PolicyCard({title, texts}) {
                 key={text}
                 className={`
                   text
-                  text-center md:text-right
+                  text-center
                   my-2
                 `}
               >
@@ -47,17 +43,6 @@ export default function PolicyCard({title, texts}) {
             ))
           }
         </div>
-
-        <Image
-          src={`/images/policy/${title} illustration.svg`}
-          alt={`${title} image`}
-          width={400}
-          height={400}
-          className={`
-            w-full
-            max-w-md
-          `}
-        />
       </div>
 
     </div>
