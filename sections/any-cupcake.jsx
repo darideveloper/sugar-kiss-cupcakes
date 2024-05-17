@@ -39,7 +39,7 @@ export default function AnyCupcake() {
           px-2
         `}
       >
-        Any cupcake flavor can also be made also into a dessert parfait cup
+        Any cupcake flavor can also be made into a dessert parfait cup
       </p>
 
       <Image
