@@ -28,20 +28,26 @@ export default function PolicyCard({title, texts}) {
             w-11/12ª
           `}
         >
-          {
-            texts.map(text => (
-              <p 
-                key={text}
-                className={`
-                  text
-                  text-center
-                  my-2
-                `}
-              >
-                {text}
-              </p>
-            ))
-          }
+          <p
+            className={`
+              text
+              text-center
+              my-2
+            `}
+          >
+            {
+              texts.map(text => (
+                <span 
+                  key={text}
+                  className={`
+
+                  `}
+                >
+                  {text}
+                </span>
+              ))
+            }
+          </p>
         </div>
       </div>
 
