@@ -45,11 +45,6 @@ export default function Footer() {
       "link": "/policy",
       "is_external": false
     },
-    {
-      "text": "681 Elite Ct, Ridgefield, NJ 07657",
-      "link": "https://www.google.com/maps/place/681+Elite+Ct,+Ridgefield,+NJ+07657/@40.826412,-74.003349,15z/data=!4m6!3m5!1s0x89c2f7bcd763bd39:0x1cc78f816f130c93!8m2!3d40.8265033!4d-74.0033488!16s%2Fg%2F11c4vvfs70?hl=en-US&entry=ttu",
-      "is_external": true
-    }
   ]
 
   return (
