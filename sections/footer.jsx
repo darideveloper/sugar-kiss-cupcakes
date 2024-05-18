@@ -45,6 +45,11 @@ export default function Footer() {
       "link": "/policy",
       "is_external": false
     },
+    {
+      "text": "Ridgefield, NJ 07657",
+      "link": "#",
+      "is_external": false
+    }
   ]
 
   return (
