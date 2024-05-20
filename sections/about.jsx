@@ -38,7 +38,7 @@ export default function About() {
 
 
       <Image 
-        src="/images/cupcakes-stickers/9.png"
+        src="/images/cupcake-sticker.png"
         width={300}
         height={300}
         alt="Cupcake background image"
@@ -53,7 +53,7 @@ export default function About() {
       />
 
       <Image 
-        src="/images/cupcakes-stickers/9.png"
+        src="/images/cupcake-sticker.png"
         width={300}
         height={300}
         alt="Cupcake background image"
