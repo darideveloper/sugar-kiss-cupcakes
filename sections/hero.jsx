@@ -70,7 +70,7 @@ export default function Hero({}) {
               text-black
             `}
           >
-            Custom gourmet cupcakes, dessert cups & cakes 
+            Custom gourmet cupcakes, dessert cups & cakes, 
             <br 
               className={`
                 hidden md:block
