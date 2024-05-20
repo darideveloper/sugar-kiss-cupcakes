@@ -35,38 +35,6 @@ export default function About() {
           Minimun order is 6 for each flavor
         </span>
       </p>
-
-
-      <Image 
-        src="/images/cupcake-sticker.png"
-        width={300}
-        height={300}
-        alt="Cupcake background image"
-        className={`
-          bg-image-right
-          opacity-10
-          absolute
-          bottom-0
-          right-0
-          blur-sm lg:blur-none
-        `}
-      />
-
-      <Image 
-        src="/images/cupcake-sticker.png"
-        width={300}
-        height={300}
-        alt="Cupcake background image"
-        className={`
-          bg-image-left
-          opacity-10
-          absolute
-          bottom-0
-          left-0
-          mirror-x
-          hidden lg:block
-        `}
-      />
     </section>
   )
 }
