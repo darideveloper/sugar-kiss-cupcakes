@@ -78,7 +78,7 @@ export default function Footer() {
         `}
       >
         <Image
-          src="/images/logo-small.webp"
+          src="/images/character.webp"
           alt="Sugar Kisses logo"
           width={100}
           height={100}
