@@ -25,17 +25,19 @@ export default function Hero({}) {
           justify-evenly
           w-full
           flex-col md:flex-row
+          max-w-5xl
+          mx-auto
         `}
       >
 
         <Image 
-          src="/images/hero.webp"
+          src="/images/logo.webp"
           alt="Nadine in cartoon version"
           width={500}
           height={500}
           className={`
             w-10/12 md:w-1/3 lg:auto
-            -mr-10 md:mr-0
+            mx-auto md:-ml-0
           `}
         />
 
@@ -47,7 +49,7 @@ export default function Hero({}) {
         >
 
           <MainText>
-            Welcome to Sugar Kiss Cupcakes 
+            Welcome
           </MainText>
 
           <Image 
@@ -90,20 +92,6 @@ export default function Hero({}) {
 
         </div>
       </div>
-
-      <Image 
-        src="/images/logo.webp"
-        width={500}
-        height={500}
-        alt="Sugar Kiss Cupcakes logo"
-        className={`
-          mx-auto
-          my-20
-          w-full
-          max-w-lg
-        `}
-      />
-
     </section>
   );
 }
