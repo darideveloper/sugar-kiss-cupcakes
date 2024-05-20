@@ -60,16 +60,6 @@ export default function Gallery({}) {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        {/* gift slide */}
-        <SwiperSlide>
-          <GallerySlide 
-            imagePath={"/images/gallery/gift.jpeg"}
-            text="Order your cupcakes now!!"
-            link={whatsappLinkBase}
-          />
-        </SwiperSlide>
-
-        {/* Images slides */}
         {
           imagesPaths.map((imagePath, index) => (
             <SwiperSlide key={index}>

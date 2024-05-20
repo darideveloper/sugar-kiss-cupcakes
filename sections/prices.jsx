@@ -36,7 +36,7 @@ export default function Prices({}) {
       "details": "Any flavor, great for two people",
     },
     {
-      "title": "Small Cakes",
+      "title": "Small cakes",
       "price": "$30 - $65",
       "details": 'Any flavor, two layer with a filling in 6", 8", 10"',
     },
@@ -101,7 +101,7 @@ export default function Prices({}) {
               title={priceData.title}
               price={priceData.price}
               details={priceData.details}
-              image={`/images/prices/${priceData.title} cupcake.jpeg`}
+              image={`/images/prices/${priceData.title}.jpeg`}
               key={priceData.title}
             />
           ))
