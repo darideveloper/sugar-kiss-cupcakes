@@ -6,28 +6,28 @@ export default function Prices({}) {
 
   const pricesData = [
     {
-      "title": "Basic gourmet flavor",
+      "title": "Basic gourmet flavors",
       "price": "$2.50",
       "details": "Chocolate/vanilla only",
     },
     {
-      "title": "Filled gourmet flavor",
+      "title": "Filled gourmet flavors",
       "price": "$2.75",
       "details": "Filling inside cupcake with custard, jelly, cream or mousse",
     },
     {
-      "title": "Decorated gourmet flavor",
+      "title": "Decorated gourmet flavors",
       "price": "$3.00",
       "details": "Sugar flowers, embellishments, characters",
     },
     {
-      "title": "Boozy cupcakes",
-      "price": "$3.00",
+      "title": "Boozy flavors",
+      "price": "$3 - $3.50",
       "details": "Infused with any liquor or wine & can be filled",
     },
     {
       "title": "Dessert parfait cups",
-      "price": "$3- $3.50",
+      "price": "$3 - $3.50",
       "details": "Any flavor",
     },
     {
