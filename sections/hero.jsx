@@ -70,13 +70,7 @@ export default function Hero({}) {
               text-black
             `}
           >
-            Custom gourmet cupcakes, dessert cups & cakes, 
-            <br 
-              className={`
-                hidden md:block
-              `}
-            />
-            scratch made using high quality  all natural ingredients
+            Custom, gourmet cupcakes, dessert, cups, and cakes. All scratch, made using high-quality all natural ingredients.
           </p>
 
           <Cta
