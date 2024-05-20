@@ -47,7 +47,7 @@ export default function Footer() {
     },
     {
       "text": "Ridgefield, NJ 07657",
-      "link": "#",
+      "link": "#footer",
       "is_external": false
     }
   ]

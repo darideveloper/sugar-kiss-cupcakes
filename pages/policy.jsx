@@ -30,7 +30,7 @@ export default function Index({}) {
   return (
     <RootLayout pageTitle="Policy">
       <MainText>
-        Sugar Kisses Policies
+        Sugar Kiss Policy
       </MainText>
 
       {
