@@ -2,47 +2,10 @@ import Title from '@/components/title'
 import ProductCard from '@/components/product-card'
 import Image from 'next/image'
 import { whatsappLinkBase } from '@/lib/contact'
+import { productsDataAll } from '@/lib/products'
 
 
 export default function Prices({}) {
-
-  const pricesData = [
-    {
-      "title": "Basic gourmet flavors",
-      "price": "$2.50",
-      "details": "Chocolate/vanilla only",
-    },
-    {
-      "title": "Filled gourmet flavors",
-      "price": "$2.75",
-      "details": "Filling inside cupcake with custard, jelly, cream or mousse",
-    },
-    {
-      "title": "Decorated gourmet flavors",
-      "price": "$3.00",
-      "details": "Sugar flowers, embellishments, characters",
-    },
-    {
-      "title": "Boozy flavors",
-      "price": "$3 - $3.50",
-      "details": "Infused with any liquor or wine & can be filled",
-    },
-    {
-      "title": "Dessert parfait cups",
-      "price": "$3 - $3.50",
-      "details": "Any flavor",
-    },
-    {
-      "title": "Mini tray cakes",
-      "price": "$3.50",
-      "details": "Any flavor, great for two people",
-    },
-    {
-      "title": "Small cakes",
-      "price": "$30 - $65",
-      "details": 'Any flavor, two layer with a filling in 6", 8", 10"',
-    },
-  ]
 
   return (
     <section
@@ -98,7 +61,7 @@ export default function Prices({}) {
       >
 
         {
-          pricesData.map((priceData) => (
+          productsDataAll.map((priceData) => (
             <ProductCard 
               title={priceData.title}
               price={priceData.price}

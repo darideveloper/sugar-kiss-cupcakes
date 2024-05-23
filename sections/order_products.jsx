@@ -2,54 +2,15 @@ import ProductCard from '@/components/product-card'
 import { useState, useEffect } from 'react'
 import { OrderContext } from "@/contexts/order-context"
 import { useContext } from "react"
-
+import { productsDataCategory } from '@/lib/products'
 
 export default function OrderProducts({}) {
 
-  // Products and subproduects
-  const productsData = [
-    {
-      "title": "Cupcakes",
-      "price": "$2.50 - $3.50",
-      "image": "Basic gourmet flavors",
-      "category": "cupcakes",
-      "subproducts": [
-        {
-          "title": "Basic gourmet flavors",
-          "price": "$2.50",
-          "details": "Chocolate/vanilla only",
-          "image": "Basic gourmet flavors",
-        },
-        {
-          "title": "Filled gourmet flavors",
-          "price": "$2.75",
-          "details": "Filling inside cupcake with custard, jelly, cream or mousse",
-          "image": "Filled gourmet flavors",
-        },
-        {
-          "title": "Decorated gourmet flavors",
-          "price": "$3.00",
-          "details": "Sugar flowers, embellishments, characters",
-          "image": "Decorated gourmet flavors",
-        },
-        {
-          "title": "Boozy flavors",
-          "price": "$3 - $3.50",
-          "details": "Infused with any liquor or wine & can be filled",
-          "image": "Boozy flavors",
-        }
-      ]
-    },
-    {
-      "title": "Dessert parfait cups",
-      "price": "$3 - $3.50",
-      "image": "Dessert parfait cups",
-      "category": "parfait",
-      "subproducts": [],
-    },
-  ]
+  // Remove mini tray cakes and small cakes from products
+  productsDataCategory.splice(2, 2)
 
-  const [currentProducts, setCurrentProducts] = useState(productsData)
+  // Save products to state
+  const [currentProducts, setCurrentProducts] = useState(productsDataCategory)
 
   // Get product context
   const { 
@@ -63,7 +24,7 @@ export default function OrderProducts({}) {
   // Manage product selection
   useEffect(() => {
     // render subproducts data when orderProduct is set
-    const product = productsData.find(product => product.title == orderProduct)
+    const product = productsDataCategory.find(product => product.title == orderProduct)
     if (product && product.subproducts.length > 0) {
       setCurrentProducts(product.subproducts)
       return
