@@ -82,10 +82,8 @@ export default function OrderProducts({}) {
       className={`
         order-product
         debug
-        max-w-3xl
-        mx-auto
         grid
-        grid-cols-2
+        grid-cols-1 xs:grid-cols-2
       `}
     >
       {
