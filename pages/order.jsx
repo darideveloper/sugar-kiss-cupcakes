@@ -1,16 +1,13 @@
-import RootLayout from "@/layouts/root-layout"
+import OrderLayout from '@/layouts/order-layout'
 import MainText from '@/components/main-text'
 
 export default function Index({}) {
   
   return (
-    <RootLayout pageTitle="Order Now">
-      <MainText>
-        Order now your delicious cupcakes!
-      </MainText>
+    <OrderLayout pageTitle="Order Now" mainText="Order now your delicious cupcakes!">
       <p>
         Commig soon...
       </p>
-    </RootLayout>
+    </OrderLayout>
   )
 }
