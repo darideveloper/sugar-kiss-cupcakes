@@ -1,6 +1,8 @@
 import Title from '@/components/title'
-import PriceCard from '@/components/price-card'
+import ProductCard from '@/components/product-card'
 import Image from 'next/image'
+import { whatsappLinkBase } from '@/lib/contact'
+
 
 export default function Prices({}) {
 
@@ -97,12 +99,19 @@ export default function Prices({}) {
 
         {
           pricesData.map((priceData) => (
-            <PriceCard 
+            <ProductCard 
               title={priceData.title}
               price={priceData.price}
               details={priceData.details}
-              image={`/images/prices/${priceData.title}.jpeg`}
+              image={`/images/products/${priceData.title}.jpeg`}
               key={priceData.title}
+              onClick={() => {
+                // Open whatsapp in a new tab
+                window.open(
+                  `${whatsappLinkBase} I am interested in ${priceData.title} cupcakes.`,
+                  '_blank'
+                )
+              }}
             />
           ))
         }

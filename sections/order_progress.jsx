@@ -4,6 +4,7 @@ import { fontTitle } from "@/lib/fonts"
 
 export default function OrderProgress ({}) {
 
+  // Get order steps from context
   const { orderSteps, orderCurrentStep } = useContext(OrderContext)
 
   return (
@@ -24,10 +25,9 @@ export default function OrderProgress ({}) {
               className={`
                 step
                 relative
-                
                 inline-block
                 w-24
-                ${orderCurrentStep == index ? 'opacity-50' : 'group cursor-pointer'}
+                ${orderCurrentStep != index && 'opacity-50'}
               `}
             >
               <p

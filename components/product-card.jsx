@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 import { fontTitle } from '@/lib/fonts'
-import { whatsappLinkBase } from '@/lib/contact'
 
-export default function PriceCard ({title, price, details, image}) {
+
+export default function ProductCard ({title, price, details, image, onClick}) {
  
-  const whatsappLink = `${whatsappLinkBase} I am interested in ${title} cupcakes.`
-
   return (
     <article 
       className={`
@@ -18,8 +16,10 @@ export default function PriceCard ({title, price, details, image}) {
         flex-col sm:flex-row
         items-center
         justify-center
+        cursor-pointer
       `}
       key={title}
+      onClick={() => onClick()}
     >
       <div
         className={`
@@ -42,8 +42,9 @@ export default function PriceCard ({title, price, details, image}) {
             mx-auto
             opacity-80
             transition
-            duration-500
+            duration-300
             rounded-2xl
+            group-hover:scale-110
           `}
         />
 
@@ -62,12 +63,7 @@ export default function PriceCard ({title, price, details, image}) {
           transition
           duration-500
           opacity-100
-          cursor-pointer
         `}
-        onClick={() => {
-          // Open whatsapp in a new tab
-          window.open(whatsappLink, '_blank')
-        }}
         >
 
         <h3
@@ -82,30 +78,42 @@ export default function PriceCard ({title, price, details, image}) {
           {title}
         </h3>
 
-        <p
-          className={`
-            price
-            text-xl
-            text-center
-            mt-2
-            font-bold
-            italic
-            text-black
-          `}
-        >
-          {price} each
-        </p>
+        {
+          price 
+          &&
+          (
+            <p
+              className={`
+                price
+                text-xl
+                text-center
+                mt-2
+                font-bold
+                italic
+                text-black
+              `}
+            >
+              {price} each
+            </p>
+          )
+        }
 
-        <p
-          className={`
-            details
-            text-center
-            mt-2
-            text-md
-          `}
-        >
-          {details}
-        </p>
+        {
+          details
+          &&
+          (
+            <p
+              className={`
+                details
+                text-center
+                mt-2
+                text-md
+              `}
+            >
+              {details}
+            </p>
+          )
+        }
 
         <svg 
           xmlns="http://www.w3.org/2000/svg"
@@ -124,9 +132,10 @@ export default function PriceCard ({title, price, details, image}) {
   )
 }
 
-PriceCard.propTypes = {
+ProductCard.propTypes = {
   title: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
-  details: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired
+  price: PropTypes.string,
+  details: PropTypes.string,
+  image: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
 }

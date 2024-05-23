@@ -1,13 +1,14 @@
 import OrderLayout from '@/layouts/order-layout'
-import MainText from '@/components/main-text'
+import OrderMain from '@/sections/order_main'
 
-export default function Index({}) {
+export default function Order({}) {
   
   return (
-    <OrderLayout pageTitle="Order Now" mainText="Order now your delicious cupcakes!">
-      <p>
-        Commig soon...
-      </p>
+    <OrderLayout 
+      pageTitle="Order Now"
+      mainText="Order now your delicious cupcakes!"
+    >
+      <OrderMain />
     </OrderLayout>
   )
 }
