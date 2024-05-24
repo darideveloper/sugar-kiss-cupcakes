@@ -54,7 +54,7 @@ export default function Input({ label, value, setValue, placeholder, type, error
           duration-200
           ${error ? 'border-red-light' : 'border-pink-light'}
           focus:border-pink-dark
-          border-4
+          border-2
         `}
         value={value}
         onChange={(e) => setValue(e.target.value)}
