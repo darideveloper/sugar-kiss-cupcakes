@@ -16,6 +16,8 @@ export default function OrderFlavors({setValue, flavors}) {
           flex
           flex-wrap
           justify-center
+          max-w-3xl
+          mx-auto
         `}
       >
         {

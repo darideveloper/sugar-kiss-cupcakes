@@ -45,6 +45,8 @@ export default function OrderProducts({}) {
           order-product
           grid
           grid-cols-1 xs:grid-cols-2
+          max-w-3xl
+          mx-auto
         `}
       >
         {

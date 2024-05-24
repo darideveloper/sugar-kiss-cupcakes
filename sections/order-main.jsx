@@ -39,7 +39,6 @@ export default function OrderMain({}) {
     <div 
       className={`
         order
-        max-w-3xl
         mx-auto
       `}>
       {component}
