@@ -6,38 +6,28 @@ const intialStep = {
   "title": 'Select a product',
   "icon": '🧁'
 }
+const stepsCupcakesParfait = [
+  intialStep,
+  {
+    "title": "Select a flavor",
+    "icon": "🍫"
+  },
+  {
+    "title": "Select a frosting",
+    "icon": "🍦"
+  },
+  {
+    "title": "Order",
+    // money icon
+    "icon": "💵"
+  }
+]
 const steps = {
   "initial": [
-    intialStep,
+    intialStep
   ],
-  "cupcakes": [
-    intialStep,
-    {
-      "title": "Select a flavor",
-      "icon": "🍫"
-    },
-    {
-      "title": "Select a frosting",
-      "icon": "🍦"
-    },
-    {
-      "title": "Order",
-      // money icon
-      "icon": "💵"
-    }
-  ],
-  "parfait": [
-    intialStep,
-    {
-      "title": "Select a flavor",
-      "icon": "🍫"
-    },
-    {
-      "title": "Order",
-      // money icon
-      "icon": "💵"
-    }
-  ]
+  "cupcakes": stepsCupcakesParfait,
+  "parfait": stepsCupcakesParfait,
 }
 
 export function OrderContextProvider(props) {
