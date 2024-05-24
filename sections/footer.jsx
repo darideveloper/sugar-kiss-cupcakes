@@ -33,22 +33,22 @@ export default function Footer() {
     {
       "text": phone,
       "link": phoneLink,
-      "is_external": true
+      "isExternal": true
     },
     {
       "text": email,
       "link": emailLink,
-      "is_external": true
+      "isExternal": true
     },
     {
       "text": "Our Policy",
       "link": "/policy",
-      "is_external": false
+      "isExternal": false
     },
     {
       "text": "Ridgefield, NJ 07657",
       "link": "#footer",
-      "is_external": false
+      "isExternal": false
     }
   ]
 
@@ -121,7 +121,7 @@ export default function Footer() {
                   hover:scale-110
                   hover:opacity-70
                 `}
-                target={link.is_external ? "_blank" : ""}
+                target={link.isExternal ? "_blank" : ""}
               >
                 {link.text}
               </a>

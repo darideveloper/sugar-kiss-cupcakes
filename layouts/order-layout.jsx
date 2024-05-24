@@ -3,7 +3,7 @@ import AOS from 'aos'
 import Head from 'next/head'
 import Header from '@/sections/header'
 import Footer from '@/sections/footer'
-import OrderProgress from '@/sections/order_progress'
+import OrderProgress from '@/sections/order-progress'
 import MainText from '@/components/main-text'
 
 import 'aos/dist/aos.css'

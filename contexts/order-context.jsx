@@ -45,6 +45,7 @@ export function OrderContextProvider(props) {
   const [orderSteps, setOrderSteps] = useState(steps[orderProductCategory])
   const [orderCurrentStep, setOrderCurrentStep] = useState(0)
   const [orderProduct, setOrderProduct] = useState(null)
+  const [orderFlavor, setOrderFlavor] = useState(null)
 
   // Update order steps based on category
   useEffect(() => {
@@ -56,7 +57,8 @@ export function OrderContextProvider(props) {
       orderSteps, setOrderSteps,
       orderCurrentStep, setOrderCurrentStep,
       orderProduct, setOrderProduct,
-      orderProductCategory, setOrderProductCategory
+      orderProductCategory, setOrderProductCategory,
+      orderFlavor, setOrderFlavor,
     }}>
       {props.children}
     </OrderContext.Provider>

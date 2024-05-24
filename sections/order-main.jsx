@@ -1,7 +1,7 @@
 import { OrderContext } from "@/contexts/order-context"
 import { useContext } from "react"
-import OrderProducts from '@/sections/order_products'
-import OrderFlavors from "@/sections/order_flavors"
+import OrderProducts from '@/sections/order-products'
+import OrderFlavors from "@/sections/order-flavors"
 
 export default function OrderMain({}) {
   
@@ -14,6 +14,8 @@ export default function OrderMain({}) {
   } else if (orderCurrentStep == 1) {
     component = <OrderFlavors />
   }
+
+  // component = <OrderFlavors />
 
   return (
     <div 

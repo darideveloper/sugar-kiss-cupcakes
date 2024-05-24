@@ -1,5 +1,5 @@
 import OrderLayout from '@/layouts/order-layout'
-import OrderMain from '@/sections/order_main'
+import OrderMain from '@/sections/order-main'
 
 export default function Order({}) {
   

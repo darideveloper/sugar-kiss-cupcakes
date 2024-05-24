@@ -14,7 +14,7 @@ export default function OrderProgress ({}) {
         flex
         justify-evenly
         align-center
-        py-6
+        py-12
       `}
     >
       {

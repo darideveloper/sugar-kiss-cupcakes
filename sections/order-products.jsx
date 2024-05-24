@@ -39,31 +39,33 @@ export default function OrderProducts({}) {
   }, [orderProduct])
 
   return (
-    <div 
-      className={`
-        order-product
-        debug
-        grid
-        grid-cols-1 xs:grid-cols-2
-      `}
-    >
-      {
-        currentProducts.map((product, index) => (
-          <ProductCard 
-            key={index}
-            title={product.title}
-            price={product.price}
-            image={`/images/products/${product.image}.jpeg`}
-            onClick={() => {
-              setOrderProduct(product.title)
-              if (product.category) {
-                setOrderProductCategory(product.category)
-              }
-            }}
-            
-          />
-        ))
-      }
-    </div>
+    <>
+      <div 
+        className={`
+          order-product
+          debug
+          grid
+          grid-cols-1 xs:grid-cols-2
+        `}
+      >
+        {
+          currentProducts.map((product, index) => (
+            <ProductCard 
+              key={index}
+              title={product.title}
+              price={product.price}
+              image={`/images/products/${product.image}.jpeg`}
+              onClick={() => {
+                setOrderProduct(product.title)
+                if (product.category) {
+                  setOrderProductCategory(product.category)
+                }
+              }}
+              
+            />
+          ))
+        }
+      </div>
+    </>
   )
 }
