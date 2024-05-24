@@ -21,9 +21,8 @@ export default function GallerySlide ({imagePath, text = "", link="#"}) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => {
-        if (isHovered) {
-          window.open(link, '_blank')
-        }
+        // Open link in new tab
+        window.open(link, '_blank')
       }}
     >
       <Image 

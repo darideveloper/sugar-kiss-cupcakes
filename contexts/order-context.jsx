@@ -46,6 +46,14 @@ export function OrderContextProvider(props) {
   const [orderCurrentStep, setOrderCurrentStep] = useState(0)
   const [orderProduct, setOrderProduct] = useState(null)
   const [orderFlavor, setOrderFlavor] = useState(null)
+  const [orderFrosting, setOrderFrosting] = useState(null)
+
+  // DEBUG: add default values
+  // useEffect(() => {
+  //   setOrderProductCategory('cupcakes')
+  //   setOrderProduct('Basic gourmet flavors')
+  //   setOrderFlavor('Chocolate/vanilla only')
+  // }, [])
 
   // Update order steps based on category
   useEffect(() => {
@@ -59,6 +67,7 @@ export function OrderContextProvider(props) {
       orderProduct, setOrderProduct,
       orderProductCategory, setOrderProductCategory,
       orderFlavor, setOrderFlavor,
+      orderFrosting, setOrderFrosting,
     }}>
       {props.children}
     </OrderContext.Provider>

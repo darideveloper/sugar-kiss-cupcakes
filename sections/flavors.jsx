@@ -39,14 +39,15 @@ export default function Flavors() {
         `}
       >
         {
-          flavors["cupcakes"].map((flavorData) => (
+          flavors["cupcakes"].map((flavor) => (
             <FlavorCard 
-              text={flavorData.text}
-              iconType={flavorData.iconType}
-              icon={flavorData.icon}
+              text={flavor.text}
+              iconType={flavor.iconType}
+              icon={flavor.icon}
               onClick={() => {
+                // Open WhatsApp with a message in a new tab
                 window.open(
-                  `${whatsappLinkBase}I want to order a ${flavorData.text} cupcake`,
+                  `${whatsappLinkBase}I want to order a ${flavor.text} cupcake`,
                   '_blank'
                 )
               }}

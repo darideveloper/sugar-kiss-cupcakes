@@ -108,7 +108,10 @@ export default function Header ({}) {
           items-center
           md:hidden
         `}
-        onClick={() => setMenuOpen(!menuOpen)}
+        onClick={() => {
+          // Toggle menu
+          setMenuOpen(!menuOpen)
+        }}
       >
         <svg 
           xmlns="http://www.w3.org/2000/svg"

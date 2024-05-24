@@ -24,17 +24,17 @@ export default function OrderProducts({}) {
   // Manage product selection
   useEffect(() => {
     // render subproducts data when orderProduct is set
-    const product = productsDataCategory.find(product => product.title == orderProduct)
-    if (product && product.subproducts.length > 0) {
-      setCurrentProducts(product.subproducts)
-      return
+    if (orderProduct) {
+      
+      if (orderProduct.subproducts.length > 0) {
+        // Show subproducts
+        setCurrentProducts(orderProduct.subproducts)
+      } else {
+        // Go to next page
+        setOrderCurrentStep(1) 
+      }
     }
 
-    // Save product and move to next step
-    if (orderProduct) {
-      setOrderProduct(orderProduct)
-      setOrderCurrentStep(1)
-    }
 
   }, [orderProduct])
 
@@ -56,8 +56,10 @@ export default function OrderProducts({}) {
               price={product.price}
               image={`/images/products/${product.image}.jpeg`}
               onClick={() => {
-                setOrderProduct(product.title)
+                // Save product
+                setOrderProduct(product)
                 if (product.category) {
+                  // Save product category
                   setOrderProductCategory(product.category)
                 }
               }}

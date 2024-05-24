@@ -1,17 +1,15 @@
-import { flavors } from '@/lib/flavors'
+import PropTypes from 'prop-types'
 import FlavorCard from '@/components/flavor-card'
-
+import { flavors } from '@/lib/flavors'
 import { OrderContext } from "@/contexts/order-context"
 import { useContext } from "react"
 
-export default function OrderFlavors({}) {
+export default function OrderFlavors({setValue, flavors}) {
 
   // Get product context
   const { 
-    setOrderFlavor,
-    OrderCurrentStep,
+    orderCurrentStep,
     setOrderCurrentStep,
-    orderProductCategory
   } = useContext(OrderContext)
 
   return (
@@ -24,14 +22,17 @@ export default function OrderFlavors({}) {
         `}
       >
         {
-          flavors[orderProductCategory].map((flavorData) => (
+          flavors.map((flavor) => (
             <FlavorCard 
-              text={flavorData.text}
-              iconType={flavorData.iconType}
-              icon={flavorData.icon}
+              text={flavor.text}
+              iconType={flavor.iconType}
+              icon={flavor.icon}
               onClick={() => {
-                setOrderFlavor(flavorData.text)
-                setOrderCurrentStep(OrderCurrentStep + 1)
+                // Save flavor
+                setValue(flavor)
+
+                // Go to next step
+                setOrderCurrentStep(orderCurrentStep + 1)
               }}
             />
             
