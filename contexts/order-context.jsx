@@ -60,8 +60,13 @@ export function OrderContextProvider(props) {
     setOrderSteps(steps[orderProductCategory])
   }, [orderProductCategory])
 
+  function goNextStep () {
+    setOrderCurrentStep(orderCurrentStep + 1)
+  }
+
   return (
     <OrderContext.Provider value={{ 
+      goNextStep,
       orderSteps, setOrderSteps,
       orderCurrentStep, setOrderCurrentStep,
       orderProduct, setOrderProduct,

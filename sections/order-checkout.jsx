@@ -3,10 +3,7 @@ import { useContext } from "react"
 
 export default function OrderCheckout ({}) {
 
-  const { 
-    orderCurrentStep,
-    setOrderCurrentStep,
-  } = useContext(OrderContext)
+  const { goNextStep } = useContext(OrderContext)
 
   return (
     <div 
@@ -14,8 +11,7 @@ export default function OrderCheckout ({}) {
     >
       <button
         onClick={() => {
-          // Go to next step
-          setOrderCurrentStep(orderCurrentStep + 1)
+          goNextStep()
         }}
       >
         Next

@@ -16,7 +16,7 @@ export default function OrderProducts({}) {
   const { 
     orderProduct,
     setOrderProduct,
-    setOrderCurrentStep,
+    goNextStep,
     setOrderProductCategory
   } = useContext(OrderContext)
 
@@ -31,7 +31,7 @@ export default function OrderProducts({}) {
         setCurrentProducts(orderProduct.subproducts)
       } else {
         // Go to next page
-        setOrderCurrentStep(1) 
+        goNextStep()
       }
     }
 

@@ -7,10 +7,7 @@ import { useContext } from "react"
 export default function OrderFlavors({setValue, flavors}) {
 
   // Get product context
-  const { 
-    orderCurrentStep,
-    setOrderCurrentStep,
-  } = useContext(OrderContext)
+  const { goNextStep } = useContext(OrderContext)
 
   return (
     <div 
@@ -28,11 +25,9 @@ export default function OrderFlavors({setValue, flavors}) {
               iconType={flavor.iconType}
               icon={flavor.icon}
               onClick={() => {
-                // Save flavor
+                // Save flavor and go next step
                 setValue(flavor)
-
-                // Go to next step
-                setOrderCurrentStep(orderCurrentStep + 1)
+                goNextStep()
               }}
             />
             
