@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import { fontTitle } from '@/lib/fonts'
+import { fontTitle, fontRegular } from '@/lib/fonts'
 
-export default function Input({ label, value, setValue, placeholder, type, required = true, className = "" }) {
+export default function Input({ label, value, setValue, placeholder, type, error, required = true, className = "" }) {
   return (
 
     <label
@@ -10,8 +10,9 @@ export default function Input({ label, value, setValue, placeholder, type, requi
         ${className}
       `}
     >
-      <span
+      <p
         className={`
+          label
           ${fontTitle.className}
           block
           duration-200
@@ -21,7 +22,22 @@ export default function Input({ label, value, setValue, placeholder, type, requi
         `}
       >
         {label}
-      </span>
+
+        <span
+          className={`
+            block
+            text-sm
+            ${fontRegular.className}
+            text-red-dark
+            font-bold
+            underline
+          `}
+        >
+          {error}
+        </span>
+
+      </p>
+
       <input
         type={type}
         placeholder={placeholder}
@@ -36,7 +52,7 @@ export default function Input({ label, value, setValue, placeholder, type, requi
           font-bold
           w-full
           duration-200
-          border-pink-light
+          ${error ? 'border-red-light' : 'border-pink-light'}
           focus:border-pink-dark
           border-4
         `}
@@ -54,5 +70,6 @@ Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
   type: PropTypes.string,
   required: PropTypes.bool,
+  error: PropTypes.string,
   className: PropTypes.string,
 }

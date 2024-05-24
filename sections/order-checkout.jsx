@@ -18,7 +18,7 @@ export default function OrderCheckout({ }) {
   // Checkout consts
   const minAmount = 6
 
-  // Checkout local states
+  // Order state
   const [amount, setAmount] = useState(minAmount)
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
@@ -30,8 +30,50 @@ export default function OrderCheckout({ }) {
   const [address, setAddress] = useState("")
   const [postalCode, setPostalCode] = useState("")
 
+  // Error state
+  const [firstNameError, setFirstNameError] = useState("")
+  const [lastNameError, setLastNameError] = useState("")
+  const [emailError, setEmailError] = useState("")
+  const [phoneError, setPhoneError] = useState("")
+  const [dateError, setDateError] = useState("")
+  const [timeError, setTimeError] = useState("")
+  const [addressError, setAddressError] = useState("")
+  const [postalCodeError, setPostalCodeError] = useState("")
+
   function handleSubmit(e) {
     e.preventDefault()
+
+    // Validate all fields
+    const fieldsErrorsSetters = [
+      [firstName, setFirstNameError],
+      [lastName, setLastNameError],
+      [email, setEmailError],
+      [phone, setPhoneError],
+      [date, setDateError],
+      [time, setTimeError],
+    ]
+
+    // Delivery fields
+    if (orderType === "delivery") {
+      fieldsErrorsSetters.push([address, setAddressError])
+      fieldsErrorsSetters.push([postalCode, setPostalCodeError])
+    }
+
+    let missingFields = false
+    for (const [field, setError] of fieldsErrorsSetters) {
+      if (field === "") {
+        missingFields = true
+        setError("This field is required")
+      } else {
+        setError("")
+      }
+    }
+
+    // Show alert if missing fields
+    if (missingFields) {
+      alert("Please fill all required fields")
+    }
+
     console.log("Order Submitted")
   }
 
@@ -159,6 +201,7 @@ export default function OrderCheckout({ }) {
           placeholder="John"
           type="text"
           required={true}
+          error={firstNameError}
         />
 
         <Input
@@ -168,6 +211,7 @@ export default function OrderCheckout({ }) {
           placeholder="Doe"
           type="text"
           required={true}
+          error={lastNameError}
         />
 
         <Input
@@ -177,6 +221,7 @@ export default function OrderCheckout({ }) {
           placeholder="example@gmail.com"
           type="email"
           required={true}
+          error={emailError}
         />
 
         <Input
@@ -186,6 +231,7 @@ export default function OrderCheckout({ }) {
           placeholder="123-456-7890"
           type="tel"
           required={true}
+          error={phoneError}
         />
       </section>
 
@@ -248,6 +294,7 @@ export default function OrderCheckout({ }) {
             className={`
               w-full md:w-2/3
             `}
+            error={dateError}
           />
 
           <Input
@@ -259,6 +306,7 @@ export default function OrderCheckout({ }) {
             className={`
               w-full md:w-1/3
             `}
+            error={timeError}
           />
 
         </div>
@@ -306,6 +354,7 @@ export default function OrderCheckout({ }) {
               className={`
                 w-11/12 md:w-2/3
               `}
+              error={addressError}
             />
 
             <Input
@@ -318,6 +367,7 @@ export default function OrderCheckout({ }) {
               className={`
                 w-11/12 md:w-1/3
               `}
+              error={postalCodeError}
             />
           </div>
       }
