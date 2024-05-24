@@ -382,9 +382,10 @@ export default function OrderCheckout({ }) {
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="product" value={orderProduct.title} />
+      <input type="hidden" name="price" value={orderProduct.price} />
+      <input type="hidden" name="amount" value={amount} />
       <input type="hidden" name="flavor" value={orderFlavor.text} />
       <input type="hidden" name="frosting" value={orderFrosting.text} />
-      <input type="hidden" name="amount" value={amount} />
       <input type="hidden" name="first name" value={firstName} />
       <input type="hidden" name="last name" value={lastName} />
       <input type="hidden" name="email" value={email} />
