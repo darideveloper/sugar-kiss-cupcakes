@@ -2,10 +2,12 @@ import { OrderContext } from "@/contexts/order-context"
 import { useContext } from "react"
 import { fontTitle } from "@/lib/fonts"
 import { useState } from "react"
+
 import Title from "@/components/Title"
 import FlavorCard from "@/components/flavor-card"
 import Image from "next/image"
 import AmountSelector from "@/components/amount-selector"
+import Input from "@/components/input"
 
 export default function OrderCheckout ({}) {
 
@@ -16,6 +18,10 @@ export default function OrderCheckout ({}) {
 
   // Checkout local states
   const [amount, setAmount] = useState(minAmount)
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
 
   return (
     <div 
@@ -24,6 +30,7 @@ export default function OrderCheckout ({}) {
       <Title
         className={`
           -mt-0
+          pt-6
         `}
       >
         Order Summary
@@ -114,18 +121,62 @@ export default function OrderCheckout ({}) {
             />
           </div>
         </div>
+      </section>
+    
+      <Title>
+        Contact info
+      </Title>
 
-        
+      <section 
+        className={`
+          contact
+          w-11/12
+          mx-auto
+          grid
+          grid-cols-1 md:grid-cols-2
+          gap-4
+        `}
+      >
+        <Input 
+          label="First Name"
+          value={firstName}
+          setValue={setFirstName}
+          placeholder="John"
+          type="text"
+          required={true}
+        />
 
+        <Input 
+          label="Last Name"
+          value={lastName}
+          setValue={setLastName}
+          placeholder="Doe"
+          type="text"
+          required={true}
+        />
+
+        <Input
+          label="Email"
+          value={email}
+          setValue={setEmail}
+          placeholder="example@gmail.com"
+          type="email"
+          required={true}
+        />
+
+        <Input
+          label="Phone"
+          value={phone}
+          setValue={setPhone}
+          placeholder="123-456-7890"
+          type="tel"
+          required={true}
+        />
+
+
+        {/* TODO: ADD HIDDEN INPUTS  */}
 
       </section>
-      <button
-        onClick={() => {
-          goNextStep()
-        }}
-      >
-        Next
-      </button>
     </div>
   )
 }
