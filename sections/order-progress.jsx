@@ -27,7 +27,8 @@ export default function OrderProgress ({}) {
                 relative
                 inline-block
                 w-24
-                ${orderCurrentStep != index && 'opacity-50'}
+                duration-300
+                ${orderCurrentStep == index ? 'scale-110' : 'opacity-50'}
               `}
             >
               <p
@@ -52,6 +53,7 @@ export default function OrderProgress ({}) {
                   duration-300
                   group-hover:scale-150
                   group-hover:ml-12
+                  ${orderCurrentStep != index ? 'scale-125' : 'scale-150'}
                 `}
               >
                 {index + 1}
