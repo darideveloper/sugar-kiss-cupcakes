@@ -1,4 +1,4 @@
-import Title from '@/components/title'
+import H2 from '@/components/h2'
 import ProductCard from '@/components/product-card'
 import Image from 'next/image'
 import { whatsappLinkBase } from '@/lib/contact'
@@ -48,7 +48,7 @@ export default function Prices({}) {
         `}
       />  
 
-      <Title>Prices</Title>
+      <H2>Prices</H2>
 
       <div
         className={`
@@ -68,7 +68,6 @@ export default function Prices({}) {
               price={priceData.price}
               details={priceData.details}
               image={`/images/products/${priceData.title}.jpeg`}
-              key={priceData.title}
               onClick={() => {
                 // Open whatsapp in a new tab
                 window.open(

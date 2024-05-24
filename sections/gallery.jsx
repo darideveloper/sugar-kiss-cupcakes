@@ -1,4 +1,4 @@
-import Title from '@/components/title'
+import H2 from '@/components/h2'
 import GallerySlide from '@/components/gallery-slide'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
@@ -46,7 +46,7 @@ export default function Gallery({}) {
       `}
       id="gallery"
     >
-      <Title>Gallery</Title>
+      <H2>Gallery</H2>
 
       <Swiper
         modules={[Navigation]}

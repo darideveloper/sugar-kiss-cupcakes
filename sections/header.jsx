@@ -47,10 +47,11 @@ export default function Header ({}) {
       >
         <Image 
           src="/images/character.webp"
+          alt="Sugar Kiss Cupcakes logo"
           width={80}
           height={80}
-          alt="Sugar Kiss Cupcakes logo"
           className={`
+            logo
             mx-auto
           `}
         />

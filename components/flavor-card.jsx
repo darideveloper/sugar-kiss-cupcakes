@@ -44,9 +44,6 @@ export default function FlavorCard ({text, iconType, icon, onClick}) {
             width={60}
             height={60}
             alt={`${text} flavor`}
-            className={`
-
-            `}
           />
         }
       </div>

@@ -1,4 +1,4 @@
-import Title from '@/components/title'
+import H2 from '@/components/h2'
 import FlavorCard from '@/components/flavor-card'
 import { flavors } from '@/lib/flavors'
 import { whatsappLinkBase } from '@/lib/contact'
@@ -16,7 +16,7 @@ export default function Flavors() {
       id="flavors"
     >
 
-      <Title>Cupcake Flavors</Title>
+      <H2>Cupcake Flavors</H2>
       
       <p
         className={`

@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
-import Title from '@/components/title'
-import Image from 'next/image'
+import H2 from '@/components/h2'
 
 export default function PolicyCard({title, texts}) {
   return (
@@ -11,7 +10,7 @@ export default function PolicyCard({title, texts}) {
         mx-auto
       `}
     >
-      <Title>{title}</Title>
+      <H2>{title}</H2>
 
       <div 
         className={`

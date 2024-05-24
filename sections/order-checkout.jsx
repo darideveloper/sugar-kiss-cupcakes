@@ -3,7 +3,7 @@ import { useContext } from "react"
 import { fontTitle } from "@/lib/fonts"
 import { useState } from "react"
 
-import Title from "@/components/Title"
+import H2 from '@/components/h2'
 import FlavorCard from "@/components/flavor-card"
 import Image from "next/image"
 import AmountSelector from "@/components/amount-selector"
@@ -81,14 +81,14 @@ export default function OrderCheckout({ }) {
     <div
       className="checkout"
     >
-      <Title
+      <H2
         className={`
           mt-0
           pt-6
         `}
       >
         Order Summary
-      </Title>
+      </H2>
 
       <section
         className={`
@@ -179,9 +179,9 @@ export default function OrderCheckout({ }) {
         </div>
       </section>
 
-      <Title>
+      <H2>
         Contact info
-      </Title>
+      </H2>
 
       <section
         className={`
@@ -235,9 +235,9 @@ export default function OrderCheckout({ }) {
         />
       </section>
 
-      <Title>
+      <H2>
         Delivery Or Pickup
-      </Title>
+      </H2>
 
       <section
         className={`
@@ -313,9 +313,9 @@ export default function OrderCheckout({ }) {
 
       </section>
 
-      <Title>
+      <H2>
         {orderType === "pickup" ? "Pickup Location" : "Delivery Location"}
-      </Title>
+      </H2>
 
       {
         orderType === "pickup"

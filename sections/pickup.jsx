@@ -1,4 +1,4 @@
-import Title from '@/components/title'
+import H2 from '@/components/h2'
 import Map from '@/components/map'
 
 export default function Pickup ({}) {
@@ -15,7 +15,7 @@ export default function Pickup ({}) {
       `}
       id="pickup"
     >
-      <Title>Pickup</Title>
+      <H2>Pickup</H2>
 
       <Map />
       

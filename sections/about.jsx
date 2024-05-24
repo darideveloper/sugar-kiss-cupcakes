@@ -1,5 +1,4 @@
-import Image from 'next/image'
-import Title from '@/components/title'
+import H2 from '@/components/h2'
 
 export default function About() {
   return (
@@ -15,7 +14,7 @@ export default function About() {
       id="about"
     >
 
-      <Title>About Us</Title>
+      <H2>About Us</H2>
 
       <p
         className={`
