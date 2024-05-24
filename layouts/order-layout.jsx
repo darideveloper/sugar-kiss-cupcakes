@@ -27,7 +27,7 @@ export default function OrderLayout({ children, pageTitle, mainText }) {
         {
           pageTitle
           ?
-          <title>{pageTitle} | {metaData.title}</title>
+          <title>{`${pageTitle} | ${metaData.title}`}</title>
           :
           <title>{metaData.title}</title>
         }

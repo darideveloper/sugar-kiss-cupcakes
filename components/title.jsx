@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { fontTitle } from '@/lib/fonts'
 
-export default function Title({children}) {
+export default function Title({children, className}) {
   return (
     <h2
       className={`
@@ -13,6 +13,7 @@ export default function Title({children}) {
         block
         font-bold
         text-center
+        ${className}
       `}
     >
       {children}
@@ -23,4 +24,5 @@ export default function Title({children}) {
 
 Title.propTypes = {
   children: PropTypes.node.isRequired,
+  mt: PropTypes.bool,
 }

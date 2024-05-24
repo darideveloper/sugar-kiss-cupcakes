@@ -21,6 +21,7 @@ export default function OrderFlavors({setValue, flavors}) {
         {
           flavors.map((flavor) => (
             <FlavorCard 
+              key={flavor.text}
               text={flavor.text}
               iconType={flavor.iconType}
               icon={flavor.icon}

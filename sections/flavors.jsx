@@ -41,6 +41,7 @@ export default function Flavors() {
         {
           flavors["cupcakes"].map((flavor) => (
             <FlavorCard 
+              key={flavor.text}
               text={flavor.text}
               iconType={flavor.iconType}
               icon={flavor.icon}

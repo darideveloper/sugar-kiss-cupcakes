@@ -17,7 +17,7 @@ const stepsCupcakesParfait = [
     "icon": "🍦"
   },
   {
-    "title": "Order",
+    "title": "Checkout",
     // money icon
     "icon": "💵"
   }
@@ -38,18 +38,12 @@ export function OrderContextProvider(props) {
   const [orderFlavor, setOrderFlavor] = useState(null)
   const [orderFrosting, setOrderFrosting] = useState(null)
 
-  // DEBUG: add default values
-  // useEffect(() => {
-  //   setOrderProductCategory('cupcakes')
-  //   setOrderProduct('Basic gourmet flavors')
-  //   setOrderFlavor('Chocolate/vanilla only')
-  // }, [])
-
   // Update order steps based on category
   useEffect(() => {
     setOrderSteps(steps[orderProductCategory])
   }, [orderProductCategory])
 
+  // Go to next step
   function goNextStep () {
     setOrderCurrentStep(orderCurrentStep + 1)
   }

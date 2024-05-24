@@ -63,6 +63,7 @@ export default function Prices({}) {
         {
           productsDataAll.map((priceData) => (
             <ProductCard 
+              key={priceData.title}
               title={priceData.title}
               price={priceData.price}
               details={priceData.details}

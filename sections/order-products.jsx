@@ -43,7 +43,6 @@ export default function OrderProducts({}) {
       <div 
         className={`
           order-product
-          debug
           grid
           grid-cols-1 xs:grid-cols-2
         `}

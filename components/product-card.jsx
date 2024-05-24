@@ -38,7 +38,7 @@ export default function ProductCard ({title, price, details, image, onClick}) {
           height={500}
           className={`
             product-image
-            w-11/12
+            w-10/12 md:w-11/12
             mx-auto
             opacity-80
             transition
