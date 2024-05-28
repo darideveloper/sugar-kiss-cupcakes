@@ -16,3 +16,9 @@ export default function Btn ({children, onClick, className}) {
     </button>
   )
 }
+
+Btn.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string
+}
