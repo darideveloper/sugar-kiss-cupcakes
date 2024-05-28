@@ -10,6 +10,7 @@ import AmountSelector from "@/components/amount-selector"
 import Input from "@/components/input"
 import Map from "@/components/map"
 import InputRadio from "@/components/input-radio"
+import Loading from "@/components/loading"
 
 export default function OrderCheckout({ }) {
 
@@ -38,6 +39,7 @@ export default function OrderCheckout({ }) {
   const [time, setTime] = useState("")
   const [address, setAddress] = useState("")
   const [postalCode, setPostalCode] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
 
   // Error state
   const [firstNameError, setFirstNameError] = useState("")
@@ -58,6 +60,7 @@ export default function OrderCheckout({ }) {
   }, [amount])
 
   function handleSubmit(e) {
+
     e.preventDefault()
 
     // Validate all fields
@@ -89,18 +92,21 @@ export default function OrderCheckout({ }) {
     // Show alert if missing fields
     if (missingFields) {
       alert("Please fill all required fields")
+    } else {
+      // Submt form
+      setIsLoading(true)
+      console.log("Order Submitted")
+      e.target.submit()
     }
-
-    // Submt form
-    console.log("Order Submitted")
-    e.target.submit()
-
   }
 
   return (
     <div
       className="checkout"
     >
+
+      <Loading isLoading={isLoading} />
+
       <H2
         className={`
           mt-0
