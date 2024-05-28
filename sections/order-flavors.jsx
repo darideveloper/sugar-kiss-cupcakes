@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types'
 import FlavorCard from '@/components/flavor-card'
-import { flavors } from '@/lib/flavors'
 import { OrderContext } from "@/contexts/order-context"
 import { useContext } from "react"
 
-export default function OrderFlavors({setValue, flavors}) {
+export default function OrderFlavors({setValue, flavors, imageFolder}) {
 
   // Get product context
   const { goNextStep } = useContext(OrderContext)
@@ -32,10 +31,17 @@ export default function OrderFlavors({setValue, flavors}) {
                 setValue(flavor)
                 goNextStep()
               }}
+              imageFolder={imageFolder}
             />
             
           ))
         }
     </div>
   )
+}
+
+OrderFlavors.propTypes = {
+  setValue: PropTypes.func.isRequired,
+  flavors: PropTypes.array.isRequired,
+  imageFolder: PropTypes.string.isRequired,
 }

@@ -22,12 +22,14 @@ export default function OrderMain({}) {
   } else if (orderCurrentStep == 1) {
     component = <OrderFlavors
                   setValue={setOrderFlavor}
-                  flavors={flavors[orderProductCategory]}          
+                  flavors={flavors[orderProductCategory]}
+                  imageFolder="flavors"          
                 />
   } else if (orderCurrentStep == 2) {
     component = <OrderFlavors 
                   setValue={setOrderFrosting}
                   flavors={frostings[orderProductCategory]}
+                  imageFolder="frostings"
                 />
   } else if (orderCurrentStep == 3) {
     component = <OrderCheckout />

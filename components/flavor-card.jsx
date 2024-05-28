@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
-export default function FlavorCard ({text, iconType, icon, onClick}) {
+export default function FlavorCard ({text, iconType, icon, onClick, imageFolder = "flavors"}) {
   return (
     <div 
       className={`
@@ -40,7 +40,7 @@ export default function FlavorCard ({text, iconType, icon, onClick}) {
           </p>
           :
           <Image 
-            src={`/images/flavors/${text} flavor.jpeg`}
+            src={`/images/${imageFolder}/${text}.webp`}
             width={60}
             height={60}
             alt={`${text} flavor`}
@@ -74,5 +74,6 @@ FlavorCard.propTypes = {
   text: PropTypes.string,
   iconType: PropTypes.string,
   icon: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  imageFolder: PropTypes.string,
 }
