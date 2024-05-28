@@ -49,6 +49,9 @@ export default function OrderCheckout({ }) {
   const [addressError, setAddressError] = useState("")
   const [postalCodeError, setPostalCodeError] = useState("")
 
+  // Redirect URL
+  const redirect = `http://${window.location.host}/thanks`
+
   // Update total when amount changes
   useEffect(() => {
     setTotal(getTotal(amount, orderProduct.price))
@@ -88,7 +91,10 @@ export default function OrderCheckout({ }) {
       alert("Please fill all required fields")
     }
 
+    // Submt form
     console.log("Order Submitted")
+    e.target.submit()
+
   }
 
   return (
@@ -409,10 +415,13 @@ export default function OrderCheckout({ }) {
         justify-center
       `}
       onSubmit={handleSubmit}
+      action={process.env.NEXT_PUBLIC_CONTACT_FORM_URL}
+      method='post'
     >
       <input type="hidden" name="product" value={orderProduct.title} />
-      <input type="hidden" name="price" value={orderProduct.price} />
+      <input type="hidden" name="price" value={orderProduct.price.replace("$", "")} />
       <input type="hidden" name="amount" value={amount} />
+      <input type="hidden" name="total" value={total} />
       <input type="hidden" name="flavor" value={orderFlavor.text} />
       <input type="hidden" name="frosting" value={orderFrosting.text} />
       <input type="hidden" name="first name" value={firstName} />
@@ -424,6 +433,10 @@ export default function OrderCheckout({ }) {
       <input type="hidden" name="time" value={time} />
       <input type="hidden" name="address" value={address} />
       <input type="hidden" name="postal code" value={postalCode} />
+      <input type="hidden" name="user" value={process.env.NEXT_PUBLIC_CONTACT_FORM_USER} />
+      <input type="hidden" name="api_key" value={process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY} />
+      <input type="hidden" name="redirect" value={redirect} />
+      <input type="hidden" name="subject" value={`New Order in Sugar Kiss Cupcakes from ${email}`} />
       
       <input 
         type="submit"
