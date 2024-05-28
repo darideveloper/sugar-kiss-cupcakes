@@ -1,7 +1,7 @@
 import { OrderContext } from "@/contexts/order-context"
 import { useContext } from "react"
 import { fontTitle } from "@/lib/fonts"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import H2 from '@/components/h2'
 import FlavorCard from "@/components/flavor-card"
@@ -13,6 +13,14 @@ import InputRadio from "@/components/input-radio"
 
 export default function OrderCheckout({ }) {
 
+  function getTotal(amount, price) {
+
+    let priceClean = price.replace("$", "")
+    let priceFloat = parseFloat(priceClean)
+
+    return (amount * priceFloat).toFixed(2)
+  }
+
   const { orderProduct, orderFlavor, orderFrosting } = useContext(OrderContext)
 
   // Checkout consts
@@ -20,6 +28,7 @@ export default function OrderCheckout({ }) {
 
   // Order state
   const [amount, setAmount] = useState(minAmount)
+  const [total, setTotal] = useState(getTotal(amount, orderProduct.price))
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
   const [email, setEmail] = useState("")
@@ -39,6 +48,11 @@ export default function OrderCheckout({ }) {
   const [timeError, setTimeError] = useState("")
   const [addressError, setAddressError] = useState("")
   const [postalCodeError, setPostalCodeError] = useState("")
+
+  // Update total when amount changes
+  useEffect(() => {
+    setTotal(getTotal(amount, orderProduct.price))
+  }, [amount])
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -151,6 +165,18 @@ export default function OrderCheckout({ }) {
             justify-center
           `}
         >
+          <div 
+            className={`
+              total
+              ${fontTitle.className}
+              text-2xl
+              font-bold
+              -ml-3
+            `}
+          >
+            $ {total}
+          </div>
+
           <AmountSelector
             amount={amount}
             setAmount={setAmount}
@@ -166,14 +192,17 @@ export default function OrderCheckout({ }) {
             `}
           >
             <FlavorCard
-              text={`FLAVOR: ${orderFlavor.text}`}
+              text={orderFlavor.text}
               iconType={orderFlavor.iconType}
               icon={orderFlavor.icon}
+              heading="FLAVOR:"
             />
             <FlavorCard
-              text={`FROSTING: ${orderFrosting.text}`}
+              text={orderFrosting.text}
               iconType={orderFrosting.iconType}
               icon={orderFrosting.icon}
+              imageFolder="frostings"
+              heading="FROSTING:"
             />
           </div>
         </div>

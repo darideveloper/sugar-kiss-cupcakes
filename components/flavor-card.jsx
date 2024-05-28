@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import Image from 'next/image'
 
-export default function FlavorCard ({text, iconType, icon, onClick, imageFolder = "flavors"}) {
+export default function FlavorCard ({text, iconType, icon, onClick, imageFolder = "flavors", heading = ""}) {
+
   return (
     <div 
       className={`
@@ -64,7 +65,7 @@ export default function FlavorCard ({text, iconType, icon, onClick, imageFolder 
           group-hover:text-pink-dark
         `}
       >
-        {text}
+        {heading} {text}
       </p>
     </div>
   )
@@ -76,4 +77,5 @@ FlavorCard.propTypes = {
   icon: PropTypes.string,
   onClick: PropTypes.func,
   imageFolder: PropTypes.string,
+  heading: PropTypes.string,
 }
