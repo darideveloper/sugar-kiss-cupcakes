@@ -17,6 +17,7 @@ export default function OrderProgress ({}) {
         py-12
       `}
     >
+
       {
         orderSteps.map((step, index) => {
           return (

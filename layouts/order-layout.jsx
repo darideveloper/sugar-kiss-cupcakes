@@ -8,13 +8,13 @@ import MainText from '@/components/main-text'
 
 import 'aos/dist/aos.css'
 
-import { fontRegular } from '@/lib/fonts'
+import { fontRegular, fontTitle } from '@/lib/fonts'
 import { metaData } from '@/lib/meta'
 import { useEffect } from 'react'
 
 import { OrderContextProvider } from '@/contexts/order-context'
 
-export default function OrderLayout({ children, pageTitle, mainText }) {
+export default function OrderLayout({ children, pageTitle, mainText, subText }) {
   
   // Load AOS
   useEffect(() => {
@@ -45,6 +45,20 @@ export default function OrderLayout({ children, pageTitle, mainText }) {
           <MainText>
             {mainText}
           </MainText>
+
+          <p
+            className={`
+              text-center
+              ${fontTitle.className}
+              text-2xl
+              text-golden
+              w-11/12
+              mx-auto   
+            `}
+          >
+            {subText}
+          </p>
+
           <OrderProgress />
           {children}
         </main>
@@ -58,5 +72,6 @@ export default function OrderLayout({ children, pageTitle, mainText }) {
 OrderLayout.propTypes = {
   children: PropTypes.node.isRequired,
   pageTitle: PropTypes.string,
-  mainText: PropTypes.string.isRequired
+  mainText: PropTypes.string.isRequired,
+  subText: PropTypes.string,
 }
