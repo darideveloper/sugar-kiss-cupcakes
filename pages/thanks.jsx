@@ -27,9 +27,18 @@ export default function Index({}) {
           `}
         />
 
-        <MainText>
+        <h1
+          className={`
+          text-3xl
+          text-golden
+          mt-14
+          text-center
+          `}
+        >
           Thank you for your order! We will be in touch soon.
-        </MainText>
+        </h1>
+
+
 
       </div>
     </RootLayout>
