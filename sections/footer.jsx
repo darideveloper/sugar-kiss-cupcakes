@@ -37,116 +37,146 @@ export default function Footer() {
         bg-pink-dark
         mt-10
         py-4
-        flex
-        flex-col md:flex-row
-        justify-center md:justify-evenly
-        items-center
       `}
     >
-      <address
+      <div 
         className={`
-          text-white
-          font-bold
+          content
+          w-full
           flex
           flex-col md:flex-row
-          justify-center
+          justify-center md:justify-evenly
           items-center
         `}
       >
-        <Image
-          src="/images/character.webp"
-          alt="Sugar Kisses logo"
-          width={100}
-          height={100}
+
+        <address
           className={`
-            logo
-            opacity-70
-          `}
-        />
-        <div 
-          className={`
-            texts
+            text-white
+            font-bold
             flex
-            flex-col
+            flex-col md:flex-row
             justify-center
-            items-center md:items-start
-            md:ml-4
+            items-center
           `}
         >
-
-          <p
+          <Image
+            src="/images/character.webp"
+            alt="Sugar Kisses logo"
+            width={100}
+            height={100}
             className={`
-              text-2xl
-              ${fontTitle.className}
-              mb-2
+              logo
+              opacity-70
+            `}
+          />
+          <div 
+            className={`
+              texts
+              flex
+              flex-col
+              justify-center
+              items-center md:items-start
+              md:ml-4
             `}
           >
-            Sugar Kiss Cupcakes
-          </p>
 
+            <p
+              className={`
+                text-2xl
+                ${fontTitle.className}
+                mb-2
+              `}
+            >
+              Sugar Kiss Cupcakes
+            </p>
+
+            {
+              links.map((link) => (
+                <a 
+                  key={link.text}
+                  href={link.link}
+                  className={`
+                    link
+                    py-1
+                    duration-300
+                    text-sm
+                    hover:scale-110
+                    hover:opacity-70
+                  `}
+                  target={link.isExternal ? "_blank" : ""}
+                >
+                  {link.text}
+                </a>
+              ))
+            }
+
+          </div>
+        </address>
+
+        <div 
+          className={`
+            socials
+            flex
+            justify-center
+            items-center
+            mt-4
+          `}
+        >
           {
-            links.map((link) => (
+            socials.map((social) => (
               <a 
-                key={link.text}
-                href={link.link}
+                key={social.name}
+                href={social.link}
                 className={`
-                  link
-                  py-1
+                  social
+                  text-white
+                  p-2
+                  m-1
                   duration-300
-                  text-sm
                   hover:scale-110
                   hover:opacity-70
                 `}
-                target={link.isExternal ? "_blank" : ""}
+                target="_blank"
               >
-                {link.text}
+                <Image 
+                  src={`/images/socials/${social.name}.webp`}
+                  alt={`Sugar Kisses ${social.name}`}
+                  width={50}
+                  height={50}
+                  className={`
+                    social-icon
+                    w-10
+                  `}
+                />              
               </a>
             ))
           }
-
+          
         </div>
-      </address>
+      </div>
 
-      <div 
+      <small
         className={`
-          socials
+          text-white
+          text-center
+          w-full
+          mt-4
           flex
+          flex-col xs:flex-row
           justify-center
           items-center
-          mt-4
+          gap-2 xs:gap-8
         `}
       >
-        {
-          socials.map((social) => (
-            <a 
-              key={social.name}
-              href={social.link}
-              className={`
-                social
-                text-white
-                p-2
-                m-1
-                duration-300
-                hover:scale-110
-                hover:opacity-70
-              `}
-              target="_blank"
-            >
-              <Image 
-                src={`/images/socials/${social.name}.webp`}
-                alt={`Sugar Kisses ${social.name}`}
-                width={50}
-                height={50}
-                className={`
-                  social-icon
-                  w-10
-                `}
-              />              
-            </a>
-          ))
-        }
-        
-      </div>
+        &copy; {new Date().getFullYear()} Sugar Kiss Cupcakes. All rights reserved.
+        <br />
+        <a 
+          href="https://api.whatsapp.com/send?phone=5217295162472&text=Hi%2C%20I%20am%20interested%20in%20a%20web%20page%20like%20http%3A%2F%2Fsugarkisscupcake.com%2F"
+        >
+          Powered by <strong>Dari Developer</strong>
+        </a>
+      </small>
     </footer>
   )
 }
