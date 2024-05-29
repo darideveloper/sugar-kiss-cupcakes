@@ -177,7 +177,7 @@ export default function OrderCheckout({ }) {
             justify-center
           `}
         >
-          <div 
+          <div
             className={`
               total
               ${fontTitle.className}
@@ -413,48 +413,49 @@ export default function OrderCheckout({ }) {
           </div>
       }
 
-    <form
-      className={`
+      <form
+        className={`
         flex
         flex-col
         items-center
         justify-center
       `}
-      onSubmit={handleSubmit}
-      action={process.env.NEXT_PUBLIC_CONTACT_FORM_URL}
-      method='post'
-    >
-      <input type="hidden" name="product" value={orderProduct.title} />
-      <input type="hidden" name="price" value={orderProduct.price.replace("$", "")} />
-      <input type="hidden" name="amount" value={amount} />
-      <input type="hidden" name="total" value={total} />
-      <input type="hidden" name="flavor" value={orderFlavor.text} />
-      <input type="hidden" name="frosting" value={orderFrosting.text} />
-      <input type="hidden" name="first name" value={firstName} />
-      <input type="hidden" name="last name" value={lastName} />
-      <input type="hidden" name="email" value={email} />
-      <input type="hidden" name="phone" value={phone} />
-      <input type="hidden" name="order type" value={orderType} />
-      <input type="hidden" name="date" value={date} />
-      <input type="hidden" name="time" value={time} />
-      <input type="hidden" name="address" value={address} />
-      <input type="hidden" name="postal code" value={postalCode} />
-      <input type="hidden" name="user" value={process.env.NEXT_PUBLIC_CONTACT_FORM_USER} />
-      <input type="hidden" name="api_key" value={process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY} />
-      <input type="hidden" name="redirect" value={redirect} />
-      <input type="hidden" name="subject" value={`New Order in Sugar Kiss Cupcakes from ${email}`} />
-      
-      <input 
-        type="submit"
-        value="Order Now"
-        className={`
+        onSubmit={handleSubmit}
+        action={process.env.NEXT_PUBLIC_CONTACT_FORM_URL}
+        method='post'
+      >
+        <input type="hidden" name="product" value={orderProduct.title} />
+        <input type="hidden" name="price" value={orderProduct.price.replace("$", "")} />
+        <input type="hidden" name="amount" value={amount} />
+        <input type="hidden" name="total" value={total} />
+        <input type="hidden" name="flavor" value={orderFlavor.text} />
+        <input type="hidden" name="frosting" value={orderFrosting.text} />
+        <input type="hidden" name="first name" value={firstName} />
+        <input type="hidden" name="last name" value={lastName} />
+        <input type="hidden" name="email" value={email} />
+        <input type="hidden" name="phone" value={phone} />
+        <input type="hidden" name="order type" value={orderType} />
+        <input type="hidden" name="date" value={date} />
+        <input type="hidden" name="time" value={time} />
+        <input type="hidden" name="address" value={address} />
+        <input type="hidden" name="postal code" value={postalCode} />
+        <input type="hidden" name="user" value={process.env.NEXT_PUBLIC_CONTACT_FORM_USER} />
+        <input type="hidden" name="api_key" value={process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY} />
+        <input type="hidden" name="redirect" value={redirect} />
+        <input type="hidden" name="subject" value={`New Order in Sugar Kiss Cupcakes from ${email}`} />
+
+        <input
+          type="submit"
+          value="Order Now"
+          className={`
           ${fontTitle.className}
           text-3xl
           mx-auto
           rounded-2xl
           px-12
           py-2
-          my-16
+          mb-16
+          mt-24
           bg-pink-dark
           text-white
           font-bold
@@ -463,10 +464,9 @@ export default function OrderCheckout({ }) {
           hover:scale-105
           hover:opacity-80
         `}
-      />
+        />
 
-    </form>
-
+      </form>
 
     </div>
   )
