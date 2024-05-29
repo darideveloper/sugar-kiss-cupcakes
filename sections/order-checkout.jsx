@@ -1,6 +1,6 @@
 import { OrderContext } from "@/contexts/order-context"
 import { useContext } from "react"
-import { fontTitle } from "@/lib/fonts"
+import { fontTitle, fontRegular } from "@/lib/fonts"
 import { useState, useEffect } from "react"
 
 import H2 from '@/components/h2'
@@ -39,6 +39,7 @@ export default function OrderCheckout({ }) {
   const [time, setTime] = useState("")
   const [address, setAddress] = useState("")
   const [postalCode, setPostalCode] = useState("")
+  const [comments, setComments] = useState("")
   const [isLoading, setIsLoading] = useState(false)
 
   // Error state
@@ -219,6 +220,57 @@ export default function OrderCheckout({ }) {
           </div>
         </div>
       </section>
+
+      <section 
+        className={`
+          comments
+          max-w-3xl
+          w-11/12
+          mx-auto
+        `}
+      >
+       <label
+          className={`
+            group
+          `}
+        >
+          <p
+            className={`
+              label
+              ${fontTitle.className}
+              block
+              duration-200
+              group-hover:translate-x-5
+              text-lg
+              m-2
+            `}
+          >
+            Additional requests or comments
+          </p>
+
+          <textarea
+            placeholder={`if you selected "Boozy flavors" type in which liquor or wine you'd like your cupcake or dessert cup infused with and we will finalize upon order completion`}
+            className={`
+              px-4
+              py-2
+              rounded-xl
+              bg-pink-light
+              text-white
+              placeholder-white-50
+              font-bold
+              w-full
+              duration-200
+              border-pink-light
+              focus:border-pink-dark
+              border-2
+              h-32
+            `}
+            value={comments}
+            onChange={(e) => setComments(e.target.value)}
+          />
+        </label>
+      </section>
+
 
       <H2>
         Contact info
@@ -439,6 +491,8 @@ export default function OrderCheckout({ }) {
         <input type="hidden" name="time" value={time} />
         <input type="hidden" name="address" value={address} />
         <input type="hidden" name="postal code" value={postalCode} />
+        <input type="hidden" name="comments" value={comments} />
+
         <input type="hidden" name="user" value={process.env.NEXT_PUBLIC_CONTACT_FORM_USER} />
         <input type="hidden" name="api_key" value={process.env.NEXT_PUBLIC_CONTACT_FORM_API_KEY} />
         <input type="hidden" name="redirect" value={redirect} />
