@@ -1,7 +1,6 @@
 import H2 from '@/components/h2'
 import FlavorCard from '@/components/flavor-card'
 import { flavors } from '@/lib/flavors'
-import { whatsappLinkBase } from '@/lib/contact'
 
 export default function Flavors() {
 
@@ -46,10 +45,8 @@ export default function Flavors() {
               iconType={flavor.iconType}
               icon={flavor.icon}
               onClick={() => {
-                // Open WhatsApp with a message in a new tab
                 window.open(
-                  `${whatsappLinkBase}I want to order a ${flavor.text} cupcake`,
-                  '_blank'
+                  `/order`,
                 )
               }}
             />
