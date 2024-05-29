@@ -4,22 +4,26 @@ export const OrderContext = createContext()
 
 const intialStep = {
   "title": 'Select a product',
-  "icon": '🧁'
+  "icon": '🧁',
+  "type": "text"
 }
 const stepsCupcakesParfait = [
   intialStep,
   {
     "title": "Select a flavor",
-    "icon": "🍫"
+    "icon": "🧁",
+    "type": "text"
   },
   {
     "title": "Select a frosting",
-    "icon": "🍦"
+    "icon": "",
+    "type": "image"
   },
   {
     "title": "Checkout",
     // money icon
-    "icon": "💵"
+    "icon": "💵",
+    "type": "text"
   }
 ]
 const steps = {

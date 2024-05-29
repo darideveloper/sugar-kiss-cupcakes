@@ -59,17 +59,35 @@ export default function OrderProgress ({}) {
               >
                 {index + 1}
               </p>
-              <p
-                className={`
-                  icon
-                  text-5xl
-                  ml-4
-                  duration-300
-                  group-hover:ml-0
-                `}
-              >
-                {step.icon}
-              </p>
+              {
+                step.type == 'text'
+                ?
+                <p
+                  className={`
+                    icon
+                    text-5xl
+                    ml-4
+                    duration-300
+                    group-hover:ml-0
+                  `}
+                >
+                  {step.icon}
+                </p>
+                :
+                <img
+                  src={`/images/steps/${step.title}.webp`}
+                  alt={step.title}
+                  className={`
+                    image
+                    w-16
+                    h-16
+                    rounded-full
+                    mx-auto
+                    duration-300
+                    -mt-3
+                  `}
+                />
+              }
               <p
                 className={`
                   title
