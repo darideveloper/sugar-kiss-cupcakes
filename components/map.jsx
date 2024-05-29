@@ -31,7 +31,6 @@ export default function Map ({}) {
       </p>
 
       <iframe 
-        frameborder="0" 
         src={`https://www.google.com/maps/embed/v1/place?q=${mapsLinkIframe}`}
         className={`
           opacity-60
