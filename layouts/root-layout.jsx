@@ -3,6 +3,7 @@ import AOS from 'aos'
 import Head from 'next/head'
 import Header from '@/sections/header'
 import Footer from '@/sections/footer'
+import FixedButton from '@/components/fixed-button'
 
 import 'aos/dist/aos.css'
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children, pageTitle }) {
           {children}
         </main>
         <Footer />
+        <FixedButton />
       </div>
     </>
   )

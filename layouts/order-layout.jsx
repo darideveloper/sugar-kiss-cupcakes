@@ -5,6 +5,7 @@ import Header from '@/sections/header'
 import Footer from '@/sections/footer'
 import OrderProgress from '@/sections/order-progress'
 import MainText from '@/components/main-text'
+import FixedButton from '@/components/fixed-button'
 
 import 'aos/dist/aos.css'
 
@@ -63,6 +64,7 @@ export default function OrderLayout({ children, pageTitle, mainText, subText }) 
           {children}
         </main>
         <Footer />
+        <FixedButton />
       </div>
     </OrderContextProvider>
   )

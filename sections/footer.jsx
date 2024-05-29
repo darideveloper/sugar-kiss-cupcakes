@@ -1,33 +1,9 @@
 import Image from "next/image"
-import Link from "next/link"
 
 import { fontTitle } from "@/lib/fonts"
+import { socials, phone, phoneLink, email, emailLink } from "@/lib/contact"
 
 export default function Footer() {
-
-  const phone = "201-906-1316"
-  const phoneLink = `tel:+1${phone.replaceAll("-", "")}`
-  const email = "sugarkisscupcakes@aol.com"
-  const emailLink = `mailto:${email}`
-  
-  const socials = [
-    {
-      "name": "facebook",
-      "link": "https://www.facebook.com/SugarKissNadine/",
-    },
-    {
-      "name": "venmo",
-      "link": "https://venmo.com/u/Sugar-kiss",
-    },
-    {
-      "name": "phone",
-      "link": phoneLink,
-    },
-    {
-      "name": "email",
-      "link": emailLink,
-    }
-  ]
 
   const links = [
     {
