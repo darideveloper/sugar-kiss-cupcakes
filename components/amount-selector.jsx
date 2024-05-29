@@ -29,8 +29,8 @@ export default function AmountSelector({ amount, setAmount, minAmount }) {
         }}
       >
         <svg
-          stroke-linejoin="round"
-          stroke-miterlimit="2"
+          strokeLinejoin="round"
+          strokeMiterlimit="2"
           viewBox="0 0 24 24"
           className={`
             fill-white
@@ -85,8 +85,8 @@ export default function AmountSelector({ amount, setAmount, minAmount }) {
         onClick={() => setAmount(amount + 1)}
       >
         <svg
-          stroke-linejoin="round"
-          stroke-miterlimit="2"
+          strokeLinejoin="round"
+          strokeMiterlimit="2"
           viewBox="0 0 24 24"
           className={`
             fill-white
