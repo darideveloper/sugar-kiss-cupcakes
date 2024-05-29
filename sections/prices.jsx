@@ -1,7 +1,6 @@
 import H2 from '@/components/h2'
 import ProductCard from '@/components/product-card'
 import Image from 'next/image'
-import { whatsappLinkBase } from '@/lib/contact'
 import { productsDataAll } from '@/lib/products'
 
 
@@ -71,7 +70,7 @@ export default function Prices({}) {
               onClick={() => {
                 // Open whatsapp in a new tab
                 window.open(
-                  `${whatsappLinkBase} I am interested in ${priceData.title} cupcakes.`,
+                  `/order`,
                   '_blank'
                 )
               }}
