@@ -7,7 +7,7 @@ export default function Order({}) {
     <OrderLayout 
       pageTitle="Order Now"
       mainText="Order now!"
-      subText="(gluten-free and dairy free options are available, inquire within)"
+      subText="(gluten-free and/or dairy free options are available in certain flavors, inquire within)"
     >
       <OrderMain />
     </OrderLayout>
