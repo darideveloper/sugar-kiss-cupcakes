@@ -327,7 +327,7 @@ export default function OrderCheckout({ }) {
         >
 
           <Input
-            label="Date"
+            label="Date (estimate)"
             value={date}
             setValue={setDate}
             type="date"
@@ -339,7 +339,7 @@ export default function OrderCheckout({ }) {
           />
 
           <Input
-            label="Time"
+            label="Time (estimate)"
             value={time}
             setValue={setTime}
             type="time"
