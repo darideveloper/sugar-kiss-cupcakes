@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Map ({}) {
 
-  const mapsLinkIframe = "https://www.google.com/maps/embed/v1/place?q=https://www.google.com/maps/place/681+Elite+Ct,+Ridgefield,+NJ+07657,+EE.+UU./@40.8265033,-74.0033488,17z/data=!3m1!4b1!4m6!3m5!1s0x89c2f7bcd763bd39:0x1cc78f816f130c93!8m2!3d40.8265033!4d-74.0033488!16s%2Fg%2F11c4vvfs70?entry=ttu&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+  const mapsLinkIframe = "https://www.google.com/maps/embed/v1/place?q=Elite+Ct,+Ridgefield,+NJ,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
   const mapsLinkExternal = "https://www.google.com/maps?ll=40.826503,-74.003349&z=16&t=m&hl=en-US&gl=US&mapclient=embed&q=681+Elite+Ct+Ridgefield,+NJ+07657+USA"
 
   return (
@@ -16,7 +16,7 @@ export default function Map ({}) {
         justify-center
       `}
     >
-      <p
+      <p  
         className={`
           text-lg
           text-gray-500
