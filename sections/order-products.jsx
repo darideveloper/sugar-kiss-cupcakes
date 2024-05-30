@@ -6,11 +6,11 @@ import { productsDataCategory } from '@/lib/products'
 
 export default function OrderProducts({}) {
 
-  // Select only first 3 products
-  productsDataCategory.splice(3)
+  // filter ready to order products
+  const productsData = productsDataCategory.filter(product => product.ready_to_order)
 
   // Save products to state
-  const [currentProducts, setCurrentProducts] = useState(productsDataCategory)
+  const [currentProducts, setCurrentProducts] = useState(productsData)
 
   // Get product context
   const { 

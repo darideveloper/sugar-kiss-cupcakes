@@ -60,19 +60,20 @@ export default function Prices({}) {
       >
 
         {
-          productsDataAll.map((priceData) => (
+          productsDataAll.map((productData) => (
             <ProductCard 
-              key={priceData.title}
-              title={priceData.title}
-              price={priceData.price}
-              details={priceData.details}
-              image={`/images/products/${priceData.title}.jpeg`}
+              key={productData.title}
+              title={productData.title}
+              price={productData.price}
+              details={productData.details}
+              image={`/images/products/${productData.title}.jpeg`}
               onClick={() => {
                 // Open whatsapp in a new tab
-                window.open(
-                  `/order`,
-                  '_blank'
-                )
+                if (productData.ready_to_order) {
+                  window.open('/order', '_blank')
+                } else {
+                  window.open('/comming-soon', '_blank')
+                }
               }}
             />
           ))

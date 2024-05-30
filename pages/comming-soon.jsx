@@ -1,7 +1,7 @@
 import Image from "next/image"
 import RootLayout from "@/layouts/root-layout"
 
-export default function Index({}) {
+export default function CommingSoon({}) {
   return (
     <RootLayout>
       <div
@@ -34,9 +34,12 @@ export default function Index({}) {
           text-center
           `}
         >
-          Thank you for your order! We will be in touch soon.
+          Comming Soon
         </h1>
 
+        <p>
+          Contact us <a href="tel:+12019061316" className={`font-bold`}>201 906 1316</a>
+        </p>
 
 
       </div>
