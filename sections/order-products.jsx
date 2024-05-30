@@ -6,8 +6,8 @@ import { productsDataCategory } from '@/lib/products'
 
 export default function OrderProducts({}) {
 
-  // Remove mini tray cakes and small cakes from products
-  productsDataCategory.splice(2, 2)
+  // Select only first 3 products
+  productsDataCategory.splice(3)
 
   // Save products to state
   const [currentProducts, setCurrentProducts] = useState(productsDataCategory)

@@ -7,7 +7,7 @@ const intialStep = {
   "icon": '🧁',
   "type": "text"
 }
-const stepsCupcakesParfait = [
+const stepsNoCakes = [
   intialStep,
   {
     "title": "Select a flavor",
@@ -30,8 +30,9 @@ const steps = {
   "initial": [
     intialStep
   ],
-  "cupcakes": stepsCupcakesParfait,
-  "parfait": stepsCupcakesParfait,
+  "cupcakes": stepsNoCakes,
+  "parfait": stepsNoCakes,
+  "tray-cakes": stepsNoCakes
 }
 
 export function OrderContextProvider(props) {
