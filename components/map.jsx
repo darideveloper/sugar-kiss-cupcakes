@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function Map ({}) {
 
-  const mapsLinkIframe = "https://www.google.com/maps/embed/v1/place?q=Elite+Ct,+Ridgefield,+NJ,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-  const mapsLinkExternal = "https://www.google.com/maps?ll=40.826503,-74.003349&z=16&t=m&hl=en-US&gl=US&mapclient=embed&q=681+Elite+Ct+Ridgefield,+NJ+07657+USA"
+  const mapsLinkIframe = "https://www.google.com/maps/embed/v1/search?q=Ridgefield,+NJ+07657&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+  const mapsLinkExternal = "https://www.google.com/maps/place/Ridgefield,+NJ+07657/@40.8305315,-74.0291265,14z/data=!3m1!4b1!4m6!3m5!1s0x89c2f799621edf6f:0xe3ee70ebc8767370!8m2!3d40.8333184!4d-74.0123851!16s%2Fm%2F03dtmf2?hl=en-US&entry=ttu"
 
   return (
     <div 
