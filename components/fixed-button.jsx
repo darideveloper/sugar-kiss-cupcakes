@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function FixedButton({}) {
   return (
     <a 
-      href="facebookLink"
+      href={facebookLink}
       target="_blank"
       className={`
         fixed-button
