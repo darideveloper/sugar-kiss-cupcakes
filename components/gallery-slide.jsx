@@ -24,6 +24,9 @@ export default function GallerySlide ({imagePath, text = "", link="#"}) {
         // Open link in new tab
         window.open(link, '_blank')
       }}
+      data-aos="zoom-in-up"
+      data-aos-delay="0"
+      data-aos-duration="1000"
     >
       <Image 
         src={imagePath}

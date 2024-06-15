@@ -39,6 +39,9 @@ export default function Map ({}) {
           rounded-2xl
           mx-4 xs:mx-0
         `}
+        data-aos="flip-right"
+        data-aos-delay="0"
+        data-aos-duration="1000"
       />
   
       <a 

@@ -43,6 +43,7 @@ export default function Gallery({}) {
         container
         mx-auto
         relative
+        mb-32 lg:mb-0
       `}
       id="gallery"
     >

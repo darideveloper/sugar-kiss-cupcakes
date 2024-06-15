@@ -18,6 +18,9 @@ export default function FlavorCard ({text, iconType, icon, onClick, imageFolder 
       `}
       key={text}
       onClick={onClick}
+      data-aos="zoom-out"
+      data-aos-delay="0"
+      data-aos-duration="1000"
     >
       <div 
         className={`

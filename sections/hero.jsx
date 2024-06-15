@@ -39,6 +39,9 @@ export default function Hero({}) {
             w-10/12 md:w-1/3 lg:auto
             mx-auto md:-ml-0
           `}
+          data-aos="fade-right"
+          data-aos-delay="100"
+          data-aos-duration="1000"
         />
 
         <div 
@@ -46,6 +49,9 @@ export default function Hero({}) {
             text
             text-center
           `}
+          data-aos="fade-left"
+          data-aos-delay="500"
+          data-aos-duration="1000"
         >
 
           <MainText>

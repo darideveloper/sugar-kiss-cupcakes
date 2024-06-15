@@ -124,7 +124,7 @@ export default function Footer() {
           `}
         >
           {
-            socials.map((social) => (
+            socials.map((social, index) => (
               <a 
                 key={social.name}
                 href={social.link}

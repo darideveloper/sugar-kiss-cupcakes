@@ -38,6 +38,9 @@ export default function AnyCupcake() {
           w-full md:w-1/2
           px-2
         `}
+        data-aos="zoom-in"
+        data-aos-delay="0"
+        data-aos-duration="1000"
       >
         Any cupcake flavor can also be made into a dessert parfait cup
       </p>

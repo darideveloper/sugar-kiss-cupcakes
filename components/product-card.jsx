@@ -20,6 +20,9 @@ export default function ProductCard ({title, price, details, image, onClick}) {
       `}
       key={title}
       onClick={() => onClick()}
+      data-aos="fade-up"
+      data-aos-delay="0"
+      data-aos-duration="1000"
     >
       <div
         className={`
