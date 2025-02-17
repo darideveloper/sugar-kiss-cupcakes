@@ -172,7 +172,7 @@ export default function Footer() {
         &copy; {new Date().getFullYear()} Sugar Kiss Cupcakes. All rights reserved.
         <br />
         <a 
-          href="https://api.whatsapp.com/send?phone=5217295162472&text=Hi%2C%20I%20am%20interested%20in%20a%20web%20page%20like%20http%3A%2F%2Fsugarkisscupcake.com%2F"
+          href="https://api.whatsapp.com/send?phone=5214493402622"
         >
           Powered by <strong>Dari Developer</strong>
         </a>
